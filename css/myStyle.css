@@ -1,0 +1,191 @@
+﻿@font-face {
+  font-family: 'BKoodakBold';
+  src: url('../fonts/BKoodakBold.eot');
+  src: url('../fonts/BKoodakBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/BKoodakBold.woff2') format('woff2'),
+       url('../fonts/BKoodakBold.woff') format('woff'),
+       url('../fonts/BKoodakBold.ttf') format('truetype'),
+       url('../fonts/BKoodakBold.svg#BKoodakOutline') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.adpanel
+{
+    color:#343434;
+    background-color:#fcfcfc;
+    height:208px;
+  background: radial-gradient(#fcfcfc,#f0fcfe);
+           padding-left:8px;
+    padding-right:8px;
+    border: 2px solid #9cdc25;  
+
+         
+        -webkit-box-shadow: 4px 4px 4px #111; 
+          box-shadow: 1px 4px 4px #858585; 
+}
+
+
+.adpanel a
+{
+    color:#371405;
+   
+}
+.adpanel a:hover
+{
+    color:#ea5b1b;
+    text-decoration:none;
+}
+.adpanel a:hover img
+{
+ border: 6px dashed #c34607;  
+}
+.adpanelTable
+{
+    color:#606060;
+    background-color:#fcfcfc;
+    height:208px;
+  background: -webkit-radial-gradient(#eff6ff,#fefefe);
+
+    margin-left:50px;
+    margin-right:50px;
+    border: 2px solid #467ea8;  
+
+         
+        -webkit-box-shadow: 4px 4px 4px #111; 
+          box-shadow: 1px 4px 4px #858585; 
+}
+
+.adpanel2
+{
+    color:#606060;
+    background-color:#fcfcfc;
+    height:208px;
+  
+           padding-left:8px;
+    padding-right:8px;
+    border: 2px solid #467ea8;  
+
+         
+        -webkit-box-shadow: 4px 4px 4px #111; 
+          box-shadow: 1px 4px 4px #858585; 
+}
+.toppadding5
+{
+    padding-top:5px;
+    padding-left:0px;
+    padding-right:5px;
+    padding-bottom:0px;
+}
+.adpanelrow
+{
+       padding-left:15px;
+    padding-right:15px;
+}
+.adpanelMainPart
+{
+    height:160px;
+    border-bottom:solid;border-bottom-width:1px;border-color:#eee;
+
+}
+.adpanelButton
+{
+    padding-top:120px;
+}
+.adpanelMainPart h3
+{
+    color:#467ea8;
+    
+}
+.adpanelimage {
+    background-image: url('../Images/Icons/ystar.png');
+    height: 31px;
+    background-position: left;
+    background-repeat:no-repeat;
+}
+.myheaderandFooter
+{
+    background-color:#0687c1;
+}
+.mytitlebar
+{
+    background-color: #ff5e00;
+    color: #dbefff;
+}
+.englishFont
+{
+    font-family:Arial;
+}
+body {
+    font-family:BKoodakBold;
+    font-size:18px;
+    background-color:#ddedfa;
+    
+
+}
+
+.bigcontainer {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .bigcontainer {
+    width: 850px;
+  }
+}
+@media (min-width: 1200px) {
+  .bigcontainer {
+    width: 1278px;
+  }
+}
+@media (min-width: 1500px) {
+  .bigcontainer {
+    width: 1570px;
+  }
+}
+
+.fontfamilyBkoodak
+{
+     font-family: 'BKoodakBold';
+}
+.validation
+{
+    color:red;
+}
+.panelmin400{
+    min-height:400px;
+}
+.redcolor{
+    color:red;
+}
+.yellowcolor{
+    color:#a7950a;
+}
+.radiobutton{
+    color:white;
+    font-family:Tahoma;
+    font-size:12px;
+}
+.myrow{
+    padding-left:10px;
+    padding-right:10px;
+}
+.fontsize13
+{
+    font-size:13px;
+
+}
+.fontsize16
+{
+    font-size:16px;
+}
+
+.mycoloractive
+{
+    color:#dbd98d;
+}
+.mycoloractive :hover
+{
+    color:white;
+}
