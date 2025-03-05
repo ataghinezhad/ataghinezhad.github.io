@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Protected Downloads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #password-form {
+            text-align: center;
+            margin-top: 50px;
+        }
+        #download-table {
+            display: none;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #download-table th, #download-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #download-table th {
+            background-color: #f2f2f2;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="password-form">
+        <h2>Protected Downloads</h2>
+        <input type="password" id="password-input" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <div id="error-message" class="error"></div>
+    </div>
+  
+    <table id="download-table" class="table table-striped-columns">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Files (Click to Download)</th>
+          <th scope="col">Descriptions </th>
+        </tr>
+      </thead>
+      <tbody>
+        
+         
+        <tr>
+          <td>Large Scale Lecture 1 pptx</td>
+          <td><a href="courses/downloads/temp/Largescale_Lec1.pptx">
+               Lec1 </a></td>
+               <td><a href="courses/downloads/temp/Largescale_Lec2.pptx">
+                Lec2 </a></td>
+                <td><a href="courses/downloads/temp/Largescale_Lec3.3.pptx">
+                  Lec3 </a></td>
+                  <td><a href="courses/downloads/temp/Largescale_Lec4.pptx">
+                    Lec4 </a></td>
+                    <td><a href="courses/downloads/temp/Largescale_Lec5.pptx">
+                      Lec5 </a></td>
+                      <td><a href="courses/downloads/temp/Largescale_Lec6-7.pptx">
+                        Lec 6-7 </a></td>
+                        <td><a href="courses/downloads/temp/Largescale_Lec8 MapReduce.pptx">
+                          Lec 8 </a></td>
+                          <td><a href="courses/downloads/temp/Largescale_Lec9.pptx">
+                            Lec 9 </a></td>
+        </tr>
+       
+        <tr>
+          <td>Large Scale Hadoop map reduce pptx</td>
+          <td><a href="courses/downloads/temp/Largescale_Lec8 MapReduce Video.mp4">
+               Download </a></td>
+          <td>Tutorial Video  </td>
+        </tr>
+        
+        <tr>
+          <td>Database Design Lecture 1 pptx</td>
+          <td><a href="courses/downloads/temp/Database_Lec1.pptx">
+               Download </a></td>
+          <td>Reference book</td>
+        </tr>
+        <tr>
+          <td>Database Design Lecture 2 pptx</td>
+          <td><a href="courses/downloads/temp/Database_Lec2.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Database_ERD</td>
+          <td><a href="courses/downloads/temp/Database_ERD.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Database Design Lecture 2 (relational Algebra) pptx</td>
+          <td><a href="courses/downloads/temp/Database_Lec2.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Database Design Lecture 3 pptx Sql</td>
+          <td><a href="courses/downloads/temp/Database_Lec3.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Database Design Lecture 4 pptx Sql</td>
+          <td><a href="courses/downloads/temp/Database_Lec4.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Database Design Lecture 5 pptx Sql</td>
+          <td><a href="courses/downloads/temp/Database_Lec5.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Database Design Lecture 5 pptx Sql</td>
+          <td><a href="courses/downloads/temp/Database_Lec5.1 Normalization.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Software Lecture 1 pptx</td>
+          <td><a href="courses/downloads/temp/Software_Lec1.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Software Lecture 2 Solid</td>
+          <td><a href="courses/downloads/temp/Software_Lec2 Solid Principles.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Software Lecture 3 Agile</td>
+          <td><a href="courses/downloads/temp/Software_Lec3.3. Agile-Scrum farsi.pptx">
+               Download </a></td>
+          <td>Reference book</td>
+        </tr>
+
+        <tr>
+          <td>Software Lecture 4 Pert</td>
+          <td><a href="courses/downloads/temp/Software_Lec4.1 PertDiagramMine.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Software Lecture 5</td>
+          <td><a href="courses/downloads/temp/Software_Lec5. Fa Requirnment.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Software Lecture 6</td>
+          <td><a href="courses/downloads/temp/Software_Lec6.ppt">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Advance Database</td>
+          <td><a href="courses/downloads/temp/AdvanceDB Lec1. ch8.pptx">
+               Lec1 </a></td>
+               <td><a href="courses/downloads/temp/AdvanceDB Lec2. ch17.pptx">
+                Lec2 </a></td> <td><a href="courses/downloads/temp/AdvanceDB Lec3. ch18.pptx">
+                  Lec3 </a></td>
+                  <td><a href="courses/downloads/temp/AdvanceDB Lec4. ch19.pptx">
+                    Lec4 </a></td>
+                    <td><a href="courses/downloads/temp/AdvanceDB Lec5 .ch10.pptx">
+                      Lec5 </a></td>
+          <td>Reference </td>
+        </tr>
+       
+        <tr>
+          <td>Artificial Intelligence Russell 4th edition</td>
+          <td><a href="courses/downloads/temp/Artificial Intelligence. A Modern Approach, 4th Edition (رسانیکا).pdf">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Grokking MachineLearning
+            </td>
+          <td><a href="courses/downloads/temp/Grokking Machine Learning.pdf">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Seminar</td>
+          <td><a href="courses/downloads/temp/Seminar_Lec1.pptx">
+            lec 1 </a></td>
+            <td><a href="courses/downloads/temp/Seminar_Lec2.pptx">
+              Lecture 2 </a></td>
+              <td><a href="courses/downloads/temp/Seminar_Lec3.pptx">
+                Lecture 3 </a></td>
+                <td><a href="courses/downloads/temp/Seminar_Lec4.pptx">
+                  Lecture 4 </a></td>
+        </tr>
+       
+          <td>Operating system Lec1 English</td>
+          <td><a href="courses/downloads/temp/OS_Lec1.pptx.ppt">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Operating system Lec1 Farsi</td>
+          <td><a href="courses/downloads/temp/OS_Lec1 - FA.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Operating system Lec2 Farsi</td>
+          <td><a href="courses/downloads/temp/OS_Lec2 Process.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Operating system Lec3 Threads</td>
+          <td><a href="courses/downloads/temp/OS_Lec3. ch4 Threads & Concurrency .pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Operating system Lec4 Scheduling</td>
+          <td><a href="courses/downloads/temp/OS_Lec4. ch5 CPU Scheduling.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Operating system Lec5 Synchronization</td>
+          <td><a href="courses/downloads/temp/OS_Lec5 ch6 and ch7 Synchronization Tools and Example.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Operating system Lec6 Deadlocks</td>
+          <td><a href="courses/downloads/temp/OS_Lec6. ch8 Deadlocks.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        <tr>
+          <td>Operating system Lec7 Main Memory</td>
+          <td><a href="courses/downloads/temp/OS_Lec7.ch9 Main Memory.pptx">
+               Download </a></td>
+          <td>Reference </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+
+    <script>
+      async function sha256(message) {
+          // encode as UTF-8
+          const msgBuffer = new TextEncoder().encode(message);                    
+
+          // hash the message
+          const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+
+          // convert ArrayBuffer to Array
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+          // convert bytes to hex string                  
+          const hashHex = hashArray
+              .map(b => b.toString(16).padStart(2, '0'))
+              .join('');
+          return hashHex;
+      }
+
+      async function checkPassword() {
+          const passwordInput = document.getElementById('password-input');
+          const errorMessage = document.getElementById('error-message');
+          const passwordForm = document.getElementById('password-form');
+          const downloadTable = document.getElementById('download-table');
+
+          // Hashed version of 'ahmad'
+          const correctHash = '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5';
+
+          // Hash the input password
+          const inputHash = await sha256(passwordInput.value);
+
+          // Compare hashes
+          if (inputHash === correctHash) {
+              passwordForm.style.display = 'none';
+              downloadTable.style.display = 'table';
+              errorMessage.textContent = '';
+          } else {
+              errorMessage.textContent = 'Incorrect password. Please try again.';
+              passwordInput.value = '';
+          }
+      }
+
+      // Allow enter key to submit password
+      document.getElementById('password-input').addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+              checkPassword();
+          }
+      });
+  </script>
+</body>
+</html>
