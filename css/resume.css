@@ -133,6 +133,7 @@ section.resume-section .resume-item .resume-date {
 .bg-primary {
   background-color: #143363 !important;
   color: darkblue;
+   text-align: left;
 }
 
 .text-primary {
