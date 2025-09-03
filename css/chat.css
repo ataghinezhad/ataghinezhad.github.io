@@ -1,0 +1,314 @@
+/* Modern Box Container */
+.qa-modern-box {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+    margin: 20px 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Box Header */
+.qa-box-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.qa-box-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.qa-box-icon i {
+    font-size: 20px;
+    color: white;
+}
+
+.qa-box-title {
+    flex: 1;
+}
+
+.qa-box-title h5 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.qa-box-title p {
+    margin: 5px 0 0 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.qa-status-badge {
+    display: flex;
+    align-items: center;
+    background: rgba(40, 167, 69, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #28a745;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Box Content */
+.qa-box-content {
+    padding: 30px;
+}
+
+/* Modern Labels */
+.qa-modern-label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.qa-modern-label i {
+    margin-right: 8px;
+    color: #667eea;
+    font-size: 1rem;
+}
+
+/* Textarea Container */
+.qa-textarea-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.qa-modern-textarea {
+    border: 2px solid #e9ecef !important;
+    border-radius: 12px !important;
+    padding: 15px 20px !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    background: #fafbfc !important;
+    transition: all 0.3s ease !important;
+    resize: vertical !important;
+}
+
+.qa-modern-textarea:focus {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+    background: #fff !important;
+}
+
+.qa-char-indicator {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 0.8rem;
+    color: #6c757d;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Button Group */
+.qa-button-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.qa-clear-btn, .qa-ask-btn {
+    border-radius: 10px !important;
+    padding: 12px 20px !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.qa-ask-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.qa-ask-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+}
+
+.qa-clear-btn:hover {
+    transform: translateY(-2px) !important;
+}
+
+/* Response Box */
+.qa-modern-response {
+    background: #f8f9fa !important;
+    border: 2px solid #e9ecef !important;
+    border-radius: 12px !important;
+    padding: 25px !important;
+    min-height: 120px !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    color: #2c3e50 !important;
+}
+
+.qa-welcome-state {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.welcome-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.welcome-icon i {
+    font-size: 20px;
+    color: #d68910;
+}
+
+.welcome-content h6 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.welcome-content p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+/* Box Footer */
+.qa-box-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 20px 30px;
+}
+
+.quick-questions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.quick-label {
+    font-weight: 600;
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.quick-btn {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.quick-btn:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Loading State */
+.qa-ask-btn.loading {
+    background: linear-gradient(135deg, #6c757d, #495057) !important;
+    cursor: not-allowed !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .qa-modern-box {
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    .qa-box-header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .qa-box-icon {
+        margin-right: 0;
+    }
+    
+    .qa-box-content {
+        padding: 20px;
+    }
+    
+    .qa-button-group {
+        flex-direction: column;
+    }
+    
+    .qa-clear-btn, .qa-ask-btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    .qa-modern-textarea {
+        max-width: 100% !important;
+    }
+    
+    .qa-welcome-state {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .quick-questions {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .quick-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
