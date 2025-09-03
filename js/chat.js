@@ -1,5 +1,5 @@
 // API key is embedded in the code
-const GROQ_API_KEY = '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';
+const GROQ_API_KEY = '1';
 
 async function askQuestion() {
     const contextd = `Author: Dr. Ahmad Taghinezhad
