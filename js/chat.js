@@ -1,5 +1,5 @@
 // API key is embedded in the code
-const GROQ_API_KEY = '1';
+const apkey = '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';
 
 async function askQuestion() {
     const contextd = `Author: Dr. Ahmad Taghinezhad
@@ -105,7 +105,7 @@ ANSWER:`;
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${GROQ_API_KEY}`,
+                'Authorization': `Bearer ${apkey}`,
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
