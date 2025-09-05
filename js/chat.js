@@ -101,13 +101,90 @@ async function askQuestion() {
       "potentialStudentRole": "Model design, theorem proving, case study analysis."
     }
   ],
-  "publication": [
+   "publication": [
     {
       "@type": "ScholarlyArticle",
       "name": "Fault-Tolerant Cost-Efficient Scheduling for Energy and Deadline-Constrained IoT Workflows in Edge-Cloud Continuum",
       "isPartOf": "IEEE Transactions on Services Computing",
+      "datePublished": "2025",
+      "url": "https://doi.org/10.1109/TSC.2025.3599497"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Security, Reliability, Cost, and Energy-aware Scheduling of Real-Time Workflows in Compute-Continuum Environments",
+      "isPartOf": "IEEE Transactions on Cloud Computing",
       "datePublished": "2024",
-      "url": "https://doi.org/10.xxxx/xxxx"
+      "url": "https://doi.org/10.1109/TCC.2024.3426282"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "State-Space Analysis and Complexity Assessment of Puzzle Games Using Colored Petri Nets",
+      "isPartOf": "International Journal of Web Research",
+      "datePublished": "2024",
+      "url": "https://doi.org/10.22133/ijwr.2024.482725.1241"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Reliability, Rental-Cost and Energy-Aware Multi-Workflow Scheduling on Multi-Cloud Systems",
+      "isPartOf": "IEEE Transactions on Cloud Computing",
+      "datePublished": "2023",
+      "url": "https://doi.org/10.1109/TCC.2022.3223869"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "QoS-aware online scheduling of multiple workflows under task execution time uncertainty in clouds",
+      "isPartOf": "Cluster Computing, Springer",
+      "datePublished": "2022",
+      "url": "https://doi.org/10.1007/s10586-022-03600-8"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Energy-efficient workflow scheduling with budget-deadline constraints for cloud",
+      "isPartOf": "Computing, Springer",
+      "datePublished": "2022",
+      "url": "https://doi.org/10.1007/s00607-021-01030-9"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Workflow scheduling of scientific workflows under simultaneous deadline and budget constraints",
+      "isPartOf": "Cluster Computing, Springer",
+      "datePublished": "2021",
+      "url": "https://doi.org/10.1007/s10586-021-03314-3"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A Fault Tolerant Multi-Controller Framework for SDN DDoS Attacks Detection",
+      "isPartOf": "International Journal of Web Research",
+      "datePublished": "2022",
+      "url": "http://dx.doi.org/10.22133/ijwr.2022.345927.1119"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A Client-Centric Consistency Model for Distributed Data Stores using Colored Petri Nets",
+      "isPartOf": "2024 10th International Conference on Web Research (ICWR)",
+      "datePublished": "2024",
+      "url": "https://doi.org/10.1109/ICWR61162.2024.10533365"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "DDoS Attacks Detection in Multi-Controller Based Software Defined Network",
+      "isPartOf": "8th International Conference on Web Research, ICWR 2022",
+      "datePublished": "2022",
+      "url": "https://doi.org/10.1109/ICWR54782.2022.9786246"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Modelling and analysis of the monotonic read consistent distributed system using coloured Petri net",
+      "isPartOf": "2016 Eighth International Conference on Information and Knowledge Technology (IKT)",
+      "datePublished": "2016",
+      "url": "https://doi.org/10.1109/IKT.2016.7777791"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Modeling of Resource Monitoring in Federated Cloud using Colored Petri Net",
+      "isPartOf": "Knowledge-Based Engineering and Innovation (KBEI)",
+      "datePublished": "2017",
+      "url": "https://doi.org/10.1109/KBEI.2017.8324866"
     }
   ],
   "thesisSupervision": {
