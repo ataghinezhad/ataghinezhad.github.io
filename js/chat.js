@@ -297,9 +297,16 @@ ANSWER:`;
         });
 
         if (!response.ok) {
-            const err = await response.json().catch(() => ({}));
-            throw new Error(`API Error ${response.status}: ${err.error?.message || 'Unknown'}`);
-        }
+          const err = await response.json().catch(() => ({}));
+          
+          // Handle rate limit error specifically
+          if (response.status === 429) {
+              throw new Error('Service is currently busy. Please try again in a few moments.');
+          }
+          
+          // Handle other API errors generically
+          throw new Error('Service temporarily unavailable. Please try again later.');
+      }
 
         const data = await response.json();
         const answer = data.choices?.[0]?.message?.content;
@@ -308,11 +315,12 @@ ANSWER:`;
             responseBox.textContent = answer;
             responseBox.className = 'response-box';
         } else {
-            throw new Error('Unexpected API response');
+            throw new Error('Unable to process your request at the moment. Please try again.');
         }
     } catch (error) {
         console.error(error);
-        responseBox.textContent = `Error: ${error.message}`;
+        console.error(error.message);
+        responseBox.textContent = `Sorry: Can not answer rightnow, try later... `;
         responseBox.className = 'response-box error';
     } finally {
         askButton.disabled = false;

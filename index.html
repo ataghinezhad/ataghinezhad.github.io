@@ -173,7 +173,109 @@
             </div>
         </section>
 
+            <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="qa-section">
+                    <div class="my-auto">
+                
+                        <!-- Modern Box Container -->
+                        <div class="qa-modern-box">
+                            <div class="qa-box-header">
+                                <div class="qa-box-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="qa-box-title">
+                                    <h5>📚 AI‑Powered Question Answering with Dr. Taghinezhad</h5>
+<p>All answers are crafted by an AI refined under the expertise of Dr. Taghinezhad.</p>
+                                </div>
+                                <div class="qa-status-badge">
+                                    <span class="status-dot"></span>
+                                    Ready
+                                </div>
+                            </div>
+                
+                            <div class="qa-box-content">
+                                <div class="qa-section">                    
+                                    <div class="qa-form">
+                                        <div class="container">
+                                            <div class="input-section">
+                                                <label for="question" class="qa-modern-label">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    Your Question:
+                                                </label>
+                                              
+                                                <div class="qa-textarea-container">
+                                                    <textarea id="question" class="form-control qa-modern-textarea"
+                                                        style="width: 100%; max-width: 700px; min-height: 200px;"
+                                                        placeholder="Ask me anything about Dr. Ahmad’s research, courses, publications, or mentorship...
+Examples:
+• What is his research focus?
+• How can I contact him?
+• What lab does he lead?
+• What are his grading policies?
 
+بپرسید درباره پژوهش‌ها، دروس، مقالات یا راهنمایی‌های دکتر تقی‌نژاد...
+نمونه‌ها:
+• زمینه پژوهشی ایشان چیست؟
+• چطور می‌توانم با او تماس بگیرم؟
+• چه آزمایشگاهی را مدیریت می‌کند؟
+• شیوه نمره‌دهی او چگونه است؟"
+></textarea>
+                                                    <div class="qa-char-indicator">
+                                                        <span id="charCount">0</span>/1000 characters
+                                                    </div>
+                                                </div>
+                
+                                                <div class="qa-button-group">
+                                                    <button class="btn btn-outline-danger qa-clear-btn" onclick="clearQuestion()" type="button">
+                                                        <i class="fas fa-eraser"></i>
+                                                        Clear Question
+                                                    </button>
+                                                    <button id="askButton" class="btn btn-primary qa-ask-btn" onclick="askQuestion()">
+                                                        <i class="fas fa-paper-plane"></i>
+                                                        <span class="btn-text">Ask Question</span>
+                                                        <span class="btn-loading" style="display: none;">
+                                                            <i class="fas fa-spinner fa-spin"></i>
+                                                            Processing...
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div style="clear: both;"></div>
+                                            </div>
+                
+                                            <div class="response-section">
+                                                <label class="qa-modern-label">
+                                                    <i class="fas fa-robot"></i>
+                                                    AI Response:
+                                                </label>
+                                                <div id="responseBox" class="response-box qa-modern-response">
+                                                    <div class="qa-welcome-state">
+                                                        <div class="welcome-icon">
+                                                            <i class="fas fa-lightbulb"></i>
+                                                        </div>
+                                                        <div class="welcome-content">
+                                                            <h6>Ready to assist you!</h6>
+                                                            <p>Ask any question about Dr. Ahmad Taghinezhad-Niar's research work, publications, or academic background.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Quick Questions Footer -->
+                            <div class="qa-box-footer">
+                                <div class="quick-questions">
+                                    <span class="quick-label">Quick questions:</span>
+                                    <button class="quick-btn" onclick="setSuggestion('What is Dr. Ahmad\'s main research focus?')">Research Focus</button>
+                                    <button class="quick-btn" onclick="setSuggestion('Tell me how to contact him')">Contact</button>
+                                    <button class="quick-btn" onclick="setSuggestion('What lab does he lead?')">Research Lab</button>
+                                    <button class="quick-btn" onclick="setSuggestion('What are his achievements?')">Achievements</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="publications">
             <div class="my-auto">
@@ -666,110 +768,7 @@
                             </div>
                 </section>
 
-                <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="qa-section">
-                    <div class="my-auto">
-                        <h6 class="mb-5 section-title">📚 Question Answering From Dr. Ahmad Taghinezhad-Niar</h6>
-                
-                        <!-- Modern Box Container -->
-                        <div class="qa-modern-box">
-                            <div class="qa-box-header">
-                                <div class="qa-box-icon">
-                                    <i class="fas fa-comments"></i>
-                                </div>
-                                <div class="qa-box-title">
-                                    <h5>AI Research Assistant</h5>
-                                    <p>Ask questions about research and publications</p>
-                                </div>
-                                <div class="qa-status-badge">
-                                    <span class="status-dot"></span>
-                                    Ready
-                                </div>
-                            </div>
-                
-                            <div class="qa-box-content">
-                                <div class="qa-section">                    
-                                    <div class="qa-form">
-                                        <div class="container">
-                                            <div class="input-section">
-                                                <label for="question" class="qa-modern-label">
-                                                    <i class="fas fa-question-circle"></i>
-                                                    Your Question:
-                                                </label>
-                                              
-                                                <div class="qa-textarea-container">
-                                                    <textarea id="question" class="form-control qa-modern-textarea"
-                                                        style="width: 100%; max-width: 700px; min-height: 200px;"
-                                                        placeholder="Ask me anything about Dr. Ahmad’s research, courses, publications, or mentorship...
-Examples:
-• What is his research focus?
-• How can I contact him?
-• What lab does he lead?
-• What are his grading policies?
-
-بپرسید درباره پژوهش‌ها، دروس، مقالات یا راهنمایی‌های دکتر تقی‌نژاد...
-نمونه‌ها:
-• زمینه پژوهشی ایشان چیست؟
-• چطور می‌توانم با او تماس بگیرم؟
-• چه آزمایشگاهی را مدیریت می‌کند؟
-• شیوه نمره‌دهی او چگونه است؟"
-></textarea>
-                                                    <div class="qa-char-indicator">
-                                                        <span id="charCount">0</span>/1000 characters
-                                                    </div>
-                                                </div>
-                
-                                                <div class="qa-button-group">
-                                                    <button class="btn btn-outline-danger qa-clear-btn" onclick="clearQuestion()" type="button">
-                                                        <i class="fas fa-eraser"></i>
-                                                        Clear Question
-                                                    </button>
-                                                    <button id="askButton" class="btn btn-primary qa-ask-btn" onclick="askQuestion()">
-                                                        <i class="fas fa-paper-plane"></i>
-                                                        <span class="btn-text">Ask Question</span>
-                                                        <span class="btn-loading" style="display: none;">
-                                                            <i class="fas fa-spinner fa-spin"></i>
-                                                            Processing...
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                                <div style="clear: both;"></div>
-                                            </div>
-                
-                                            <div class="response-section">
-                                                <label class="qa-modern-label">
-                                                    <i class="fas fa-robot"></i>
-                                                    AI Response:
-                                                </label>
-                                                <div id="responseBox" class="response-box qa-modern-response">
-                                                    <div class="qa-welcome-state">
-                                                        <div class="welcome-icon">
-                                                            <i class="fas fa-lightbulb"></i>
-                                                        </div>
-                                                        <div class="welcome-content">
-                                                            <h6>Ready to assist you!</h6>
-                                                            <p>Ask any question about Dr. Ahmad Taghinezhad-Niar's research work, publications, or academic background.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Quick Questions Footer -->
-                            <div class="qa-box-footer">
-                                <div class="quick-questions">
-                                    <span class="quick-label">Quick questions:</span>
-                                    <button class="quick-btn" onclick="setSuggestion('What is Dr. Ahmad\'s main research focus?')">Research Focus</button>
-                                    <button class="quick-btn" onclick="setSuggestion('Tell me how to contact him')">Contact</button>
-                                    <button class="quick-btn" onclick="setSuggestion('What lab does he lead?')">Research Lab</button>
-                                    <button class="quick-btn" onclick="setSuggestion('What are his achievements?')">Achievements</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    
             </div>
 
             <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
