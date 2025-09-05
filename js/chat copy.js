@@ -1,4 +1,5 @@
 // API key is embedded in the code
+const apkey = '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';
 
 async function askQuestion() {
     const contextd = {
@@ -31,29 +32,6 @@ async function askQuestion() {
     "Scalability",
     "System Correctness"
   ],
-  "officeLocation": {
-    "@type": "Place",
-    "name": "Faculty of Electrical and Computer Engineering, Room 412",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "29 Bahman Blvd",
-      "addressLocality": "Tabriz",
-      "addressCountry": "Iran"
-    }
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Office Hours",
-    "hoursAvailable": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Wednesday"],
-        "opens": "10:00",
-        "closes": "12:00"
-      }
-    ],
-    "description": "Students can visit during office hours without appointment but better to schedule via email. For other times, schedule via email."
-  },
   "additionalProperty": [
     {
       "@type": "PropertyValue",
@@ -74,96 +52,53 @@ async function askQuestion() {
       "@type": "PropertyValue",
       "name": "Student Understanding",
       "value": "Recognizes that students have different strengths; supports them in overcoming weaknesses through practice, while motivating talented students to push beyond boundaries."
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Preferred Communication",
-      "value": "Email for formal communication, Telegram for quick academic discussions, and in-person meetings for detailed supervision."
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Expectations from Students",
-      "value": "Be punctual, prepare before class, actively participate, and show initiative in projects."
     }
   ],
-  "researchProject": [
-    {
-      "@type": "ResearchProject",
-      "name": "Fault-Tolerant Scheduling in Edge–Cloud Systems",
-      "description": "Developing cost-efficient algorithms for IoT workflow scheduling under energy and deadline constraints.",
-      "funding": "Partially supported by University of Tabriz research fund",
-      "potentialStudentRole": "Algorithm implementation, experimental evaluation, simulations."
-    },
-    {
-      "@type": "ResearchProject",
-      "name": "Formal Verification of Distributed Algorithms",
-      "description": "Verifying correctness and safety properties of consensus protocols using model checking.",
-      "potentialStudentRole": "Model design, theorem proving, case study analysis."
-    }
-  ],
-  "publication": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Fault-Tolerant Cost-Efficient Scheduling for Energy and Deadline-Constrained IoT Workflows in Edge-Cloud Continuum",
-      "isPartOf": "IEEE Transactions on Services Computing",
-      "datePublished": "2024",
-      "url": "https://doi.org/10.xxxx/xxxx"
-    }
-  ],
-  "thesisSupervision": {
-    "@type": "CreativeWork",
-    "description": "Supervises MSc and PhD theses in distributed systems, cloud-edge computing, and AI-driven scheduling. Open to international collaborations.",
-    "studentGuidelines": "Proposals should include motivation, objectives, methodology, and expected contributions."
-  },
-  "careerAdvice": "Encourages students to pursue academic publications, open-source contributions, and international internships. Provides guidance for PhD/postdoc applications abroad.",
   "teaches": [
     {
       "@type": "Course",
       "name": "Software Engineering",
-      "description": "SOLID principles, agile development, team management, requirements engineering, UML.",
-      "assessment": "Assignments (20%), Projects (20%), Final exam (60%)."
+      "description": "SOLID principles, agile development, team management, requirements engineering, UML."
     },
     {
       "@type": "Course",
       "name": "Advanced Databases",
-      "description": "Semi-structured data (XML, JSON, RDF), query languages, ACID transactions, concurrency control (2PL, MVCC), recovery systems (WAL, ARIES).",
-      "assessment": "Projects, Homeworks, Class activity (30%), Final exam (70%)."
+      "description": "Semi-structured data (XML, JSON, RDF), query languages, ACID transactions, concurrency control (2PL, MVCC), recovery systems (WAL, ARIES)."
     },
     {
       "@type": "Course",
       "name": "Intelligent User Interfaces",
-      "description": "Natural language processing, transformers, HCI/UX, evaluation metrics.",
-      "assessment": "Paper reviews (20%), Group project (40%), Presentation (40%)."
+      "description": "Natural language processing, transformers, HCI/UX, evaluation metrics."
     },
     {
       "@type": "Course",
       "name": "Large-Scale Systems",
-      "description": "Distributed systems, replication, sharding, consensus (Paxos, Raft), scalability, fault tolerance.",
-      "assessment": "Projects, Homeworks, Class activity (40%), Final exam (60%)."
+      "description": "Distributed systems, replication, sharding, consensus (Paxos, Raft), scalability, fault tolerance."
     },
     {
       "@type": "Course",
       "name": "Network Security",
-      "description": "Cryptography (symmetric/asymmetric), TLS/SSL, authentication, firewalls, intrusion detection systems (IDS).",
-      "assessment": "Lab work (30%), Midterm (20%), Final exam (50%)."
+      "description": "Cryptography (symmetric/asymmetric), TLS/SSL, authentication, firewalls, intrusion detection systems (IDS)."
     },
     {
       "@type": "Course",
       "name": "Seminar",
-      "description": "Current research topics, student presentations.",
-      "assessment": "Presentation (40%), Participation (10%). Exam (50%)"
+      "description": "Current research topics, student presentations."
     },
     {
       "@type": "Course",
-      "name": "Database",
-      "description": "Relational model, SQL, normalization, simple transactions.",
-      "assessment": "Quizzes (20%), Homework (20%), Final exam (60%)."
+      "name": "Database (Intro)",
+      "description": "Relational model, SQL, normalization, simple transactions."
+    },
+    {
+      "@type": "Course",
+      "name": "Computer Lab",
+      "description": "Programming exercises and lab projects."
     },
     {
       "@type": "Course",
       "name": "Operating Systems",
-      "description": "Processes, memory management, scheduling, file systems.",
-      "assessment": "Assignments (20%), Quizzes (20%), Final exam (60%)."
+      "description": "Processes, memory management, scheduling, file systems."
     }
   ]
 };
@@ -199,7 +134,7 @@ ANSWER:`;
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer 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`,
+                'Authorization': `Bearer ${apkey}`,
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
