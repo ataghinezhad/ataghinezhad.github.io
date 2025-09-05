@@ -33,7 +33,7 @@ async function askQuestion() {
   ],
   "officeLocation": {
     "@type": "Place",
-    "name": "Faculty of Electrical and Computer Engineering, Room 412",
+    "name": "Faculty of Electrical and Computer Engineering, Room 344",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "29 Bahman Blvd",
