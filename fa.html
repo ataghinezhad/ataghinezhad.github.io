@@ -1,420 +1,1374 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head lang="en" >
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دکتر احمد تقی‌نژاد نیار | استادیار مهندسی کامپیوتر</title>
+    <meta name="description" content="عضو هیأت علمی دانشکده مهندسی برق و کامپیوتر دانشگاه تبریز">
+    <meta name="author" content="احمد تقی نژاد نیار">
+    <meta name="keywords" content="احمد تقی نژاد, Taghinezhad, Ahmad taghinezhad niar, تقی نژاد نیار, احمد تقی نژاد نیار">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --background: #ffffff;
+            --surface: #f8fafc;
+            --border: #e5e7eb;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="عضو هیأت علمی دانشکده مهندسی برق و کامپیوتر دانشگاه تبریز"    />
-     <meta name="author" content="احمد تقی نژاد نیار" />
-    <meta name="author" content="ahmad taghinezhad niar" />
-    <meta name="keywords" content="احمد تقی نژاد, Taghinezhad, Ahmad taghinezhad niar, تقی نژاد نیار, احمد تقی نژاد نیار, taghinejad, taginejad, ahmad taghinijad niyar, taghinezhad niyar, niar" />
-    <title>Ahmad Taghinezhad Personal Website</title>
-    <link rel="shortcut icon" href="img/logo.png" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendor/bootstrap/css/bootstrap-3.2.rtl.css" rel="stylesheet" />
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+        body {
+            font-family: 'Vazirmatn', 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background-color: var(--background);
+            direction: rtl;
+        }
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            direction: rtl;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            right: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .lang-link {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-link:hover {
+            background: var(--surface);
+            color: var(--primary-color);
+        }
+
+        /* Mobile menu toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: translateY(-10px);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-align: right;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            text-align: right;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            text-align: right;
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: flex-end;
+        }
+
+        .research-tag {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: flex-end;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .contact-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: flex-end;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        /* Research Interests */
+        .research-list {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .research-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            text-align: right;
+        }
+
+        .research-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .research-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .research-item p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .skill-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .skill-list li:hover {
+            background: var(--surface);
+        }
+
+        .skill-list i {
+            color: var(--accent-color);
+            width: 20px;
+        }
+
+        .tech-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .tech-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--surface);
+            border-radius: 10px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .tech-icon:hover {
+            transform: scale(1.1);
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Publications Section */
+        .publications-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .publication-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: right;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .publication-type {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .publication-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .publication-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .publication-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            justify-content: flex-end;
+        }
+
+        .publication-badge {
+            padding: 0.2rem 0.8rem;
+            background: var(--surface);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        /* Awards Section */
+        .awards-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .award-card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s ease;
+            border-right: 4px solid var(--accent-color);
+            text-align: right;
+        }
+
+        .award-card:hover {
+            transform: translateX(-5px);
+        }
+
+        .award-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            min-width: 60px;
+        }
+
+        .award-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .award-content p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            background: var(--surface);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: right;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .submit-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow);
+            text-align: right;
+        }
+
+        .info-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .info-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .info-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+
+        .info-list i {
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .research-tags {
+                justify-content: center;
+            }
+
+            .award-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                border-right: none;
+                border-top: 4px solid var(--accent-color);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container,
+            .main-content,
+            .footer-content {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Persian number styles */
+        .persian-number {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        /* List styling for Persian content */
+        .persian-list {
+            list-style: none;
+            counter-reset: persian-counter;
+        }
+
+        .persian-list li {
+            counter-increment: persian-counter;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-right: 2rem;
+        }
+
+        .persian-list li::before {
+            content: counter(persian-counter, persian) ".";
+            position: absolute;
+            right: 0;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--surface);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+    </style>
 </head>
-<body id="top-page" dir="rtl" style="color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Menu</span>
-            <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" width="120px" src="img/ppp.jpg" alt="">
-            </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="https://ataghinezhad.github.io/">English</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="https://ataghinezhad.github.io/#about">درباره</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="https://ataghinezhad.github.io/#skills">مهارت ها</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="https://ataghinezhad.github.io/#awards">جایزه ها</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="https://ataghinezhad.github.io/#publications">مجلات چاپی</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="https://ataghinezhad.github.io/#projects">پروژه ها</a>
-
-                </li>
-              
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">دکتر احمد تقی‌نژاد نیار</div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">درباره</a></li>
+                <li><a href="downloads" class="nav-link">دانلودها</a></li>
+                <li><a href="#research" class="nav-link">علایق پژوهشی</a></li>
+                <!-- <li><a href="#skills" class="nav-link">مهارت‌ها</a></li> -->
+                <li><a href="#publications" class="nav-link">تألیفات</a></li>
+                <li><a href="#awards" class="nav-link">جوایز</a></li>
+                <li><a href="#contact" class="nav-link">تماس</a></li>
             </ul>
+            <div class="language-toggle">
+                <a href="https://ataghinezhad.github.io/" class="lang-link">English</a>
+                <a href="https://faculty.tabrizu.ac.ir/a-taghinezhad/fa" class="lang-link">صفحه دانشگاه</a>
+            </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
-    <div class="row">
-        <div class="col-sm-4">
-            &nbsp;
-        </div>
-        <div class="col-sm-8">
-            <div class="container-fluid p-0" style="text-align: right;" dir="rtl">
 
-                <section class="resume-section p-3 p-lg-5 d-flex d-column" dir="rtl" id="about">
-                    <div class="my-auto" style="margin-bottom: 0px; padding-bottom: 0px">
-                        <h2 class="mb-0">
-                             دکتر 
-                            <span class="text-primary">احمد تقی ‌نژادنیار  </span>
-                            <!-- <span class="text-warning">نیار</span> -->
-                            <br>
-                            <h5> عضو هیأت علمی دانشکده مهندسی برق و کامپیوتر دانشگاه تبریز</h5>
-                       
-                        </h2>
-                        <div class="subheading mb-5" style="align-items: center" dir="rtl">
-
-
-
-                            <hr />
-                         
-                            <span>   آدرس ایمیل:</span>
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <div class="hero-image" data-aos="fade-left">
+                <img src="img/ppp.jpg" alt="دکتر احمد تقی‌نژاد نیار" class="profile-img">
+            </div>
+            
+            <div class="hero-content" data-aos="fade-right">
+                <h1>دکتر احمد تقی‌نژاد نیار</h1>
                 
-                            <a href="mailto:a0taghinezhad@gmail.com">a0taghinezhad@gmail.com</a> <span>&</span>
-                            <a href="mailto:a.taghinezhad@tabrizu.ac.ir">a.taghinezhad@tabrizu.ac.ir</a>&nbsp;
-                   
-                        </div>
+                
+                
+                <p class="hero-description">
+                    دکتر احمد تقی‌نژاد عضو هیأت علمی گروه مهندسی کامپیوتر دانشکده مهندسی برق و کامپیوتر دانشگاه تبریز با مرتبه علمی استادیار است. ایشان رهبری آزمایشگاه سیستم‌های توزیع‌شده و هوش لبه‌ای در دانشگاه تبریز را بر عهده دارند.
+                </p>
+                
+                <p class="hero-description">
+                    در حال حاضر، ما به دنبال دانشجویان با استعداد هستیم تا به گروه تحقیقاتی ما بپیوندند و در پروژه‌های صنعتی با تمرکز بر توسعه سامانه‌های نرم‌افزاری، موتورهای جستجو و نرم‌افزارهای مبتنی بر هوش مصنوعی همکاری کنند.
+                </p>
 
-                        <p style="color: black; direction: rtl; font-size: large;" class="mb-1">
-                            دکتر احمد تقی‌نژاد عضو هیأت علمی گروه مهندسی کامپیوتر دانشکده مهندسی برق و کامپیوتر دانشگاه تبریز هست. 
-                            <br>
-                            علایق پژوهشی:
-                            <ol style="color: black; font-size: large;">
-                                <li>الگوریتم‌های زمان‌بندی (Scheduling algorithms): بررسی و بهینه‌سازی الگوریتم‌ها برای مدیریت منابع زمانی در سیستم‌ها.</li>
-                                <li>سیستم‌های توزیع شده (Distributed Systems): مطالعه و تحقیق در زمینه سیستم‌هایی که اطلاعات و وظایف را بین چندین دستگاه یا کامپیوتر به اشتراک می‌گذارند.</li>
-                                <li>محاسبات ابری و مه و لبه (Cloud and Edge/Fog Computing): مطالعه مفاهیم مرتبط با محاسبات ابری، انواع سرویس‌های ابری و مشکلات مرتبط با امنیت و مقیاس‌پذیری.</li>
-                                <li>الگوریتم‌های بهینه‌سازی و کیفیت خدمات (QoS): این حوزه بر توسعه و کاربرد الگوریتم‌هایی برای بهینه‌سازی پارامترهای مختلف در سیستم‌های رایانه‌ای، تضمین بهره‌وری انرژی، قابلیت اطمینان و امنیت تمرکز دارد.</li>
-                                <li>روش‌های رسمی و مدل‌سازی سامانه‌های کامپیوتری (Formal methods and model checking): استفاده از روش‌های ریاضی و مدل‌سازی برای تحلیل و بهبود سامانه‌های کامپیوتری.</li>
-                            </ol>
-                            <p style="color: black; font-size: large;">
-                                در حال حاضر، ما به دنبال دانشجویان با استعداد هستیم تا به گروه تحقیقاتی ما بپیوندند. در این گروه، ما به چالش‌های پیچیده در حوزه‌های فوق‌الذکر پاسخ می‌دهیم. همچنین، به دنبال دانشجویان و همکارانی هستیم که در پروژه‌های صنعتی با تمرکز بر توسعه سامانه‌های نرم‌افزاری، موتور‌های جستجو و نرم‌افزارهای مبتنی بر هوش مصنوعی به ما ملحق شوند.
-                     
-                            </p>
-                              
-                            </p>
-                        <hr />
-                        <ul class="list-inline list-social-icons mb-0">
-                            <li class="list-inline-item">
-                                <a href="https://telegram.me/ahmad_t93">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i style="color: #96d3ff" class="fa fa-telegram fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.linkedin.com/in/ahmad-taghinezhad/">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i style="color: #96d3ff" class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i style="color: #96d3ff" class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <h6 style="color: white"> احمد تقی نژاد نیار </h6>
-                    </div>
-                </section>
+                <div class="research-tags">
+                    <span class="research-tag">سیستم‌های توزیع‌شده</span>
+                    <span class="research-tag">الگوریتم‌های زمان‌بندی</span>
+                    <span class="research-tag">محاسبات ابری</span>
+                    <span class="research-tag">هوش لبه‌ای</span>
+                    <span class="research-tag">روش‌های رسمی</span>
+                </div>
 
-    
-<!--
-                <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-                    <div class="my-auto">
-                        <h2 class="mb-5">تحصیلات</h2>
+                <div class="contact-info">
+                    <a href="mailto:a0taghinezhad@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>a0taghinezhad@gmail.com</span>
+                    </a>
+                    <a href="mailto:a.taghinezhad@tabrizu.ac.ir" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>a.taghinezhad@tabrizu.ac.ir</span>
+                    </a>
+                </div>
 
-                        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                            <div class="resume-content mr-auto">
-                                <h3 class="mb-0">دانشگاه تبریز</h3>
-                                <div class="subheading mb-3">دکتری</div>
-                                <div>مهندسی نرم افزار</div>
-                            </div>
-                            <div class="resume-date text-md-right">
-                                <span class="text-primary">1396 - در حال حاضر</span>
-                            </div>
-                        </div>
-
-                        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                            <div class="resume-content mr-auto">
-                                <h3 class="mb-0">دانشگاه تبریز</h3>
-                                <div class="subheading mb-3">کارشناسی ارشد</div>
-                                <div>مهندسی نرم افزار</div>
-                            </div>
-                            <div class="resume-date text-md-right">
-                                <span class="text-primary">1394 - 1396</span>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </section>
--->
-                <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-                    <div class="my-auto">
-                        <h2 class="mb-5">مهارت‌ها</h2>
-
-
-                        <div class="subheading mb-3">زبان های برنامه نویسی و ابزار</div>
-                        <ul class="fa-ul mb-0">
-                            <li>
-                                <i class="fa-li fa fa-check"></i>
-                                Cloudsim &amp; Workflowsim: Java
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-check"></i>
-                                CPN-TOOLS &amp; Colored Petri net tools : ML Language
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-check"></i>
-                                Eclipse &amp; Netbeans: JAVA
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-check"></i>
-                                VisualStudio: Asp.Net &amp; C#.Net &amp; C++
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-check"></i>
-                                Matlab
-                            </li>
-                        </ul>
-                        <ul class="list-inline list-icons">
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-java"></i>
-                            </li>
-
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-javascript"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-jquery"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-css3"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-bootstrap"></i>
-                            </li>
-
-
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-database"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-dotnet"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-eclipse"></i>
-                            </li>
-
-
-
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-sqllite"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-visualstudio"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="devicons devicons-photoshop"></i>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="subheading mb-3">
-                        Workflow
-                        <ul class="fa-ul mb-0">
-                            <li>
-                                <i class="fa-li fa fa-check"></i>
-                                Mobile-First, Responsive Design
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-check"></i>
-                                Team Foundation Managment
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-check"></i>
-                                Agile Development &amp; Scrum
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-
-
-                <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-                    <div class="my-auto">
-                        <h2 class="mb-5">Awards &amp; Certifications</h2>
-                        <ul class="fa-ul mb-0">
-                             
-                            <li>
-                                <i class="fa-li fa fa-certificate text-warning"></i>
-                                Recieved the recruitment plan in the executive board award from National Elites Fundation of Iran, 2023.
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-certificate text-warning"></i>
-                                Recieved the Sayyad Shirazi award from National Elites Fundation of Iran, 2022.
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-certificate text-warning"></i>
-                                Admitted as an Exceptional Talent at University of Tabriz for Ph.D. programs, 2021.
-                            </li>
-                           
-        
-                            <li>
-                                <i class="fa-li fa fa-certificate text-warning"></i>
-                                Participate in Erasmus Eu project , University of Bonn, Bonn, Germany, Feb 2018
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-certificate text-warning"></i>
-                                Practical Workshop on Wireless Networks Security and Ethical Hacking, University of Tabriz, Tabriz, Iran, 2017
-                            </li>
-        
-                            <li>
-                                <i class="fa-li fa fa-trophy text-warning"></i>
-                                1<sup>st</sup>
-                                Place - Ph.D - Software Engineering- 2017
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-trophy text-warning"></i>
-                                2<sup>st</sup>
-                                Place - Master of Science - Software Engineering 2015-2017
-                            </li>
-        
-                            <li>
-                                <i class="fa-li fa fa-trophy text-warning"></i>
-        
-                                Honored Person in Iran Periodical Technology Competition (“Fannavard”) as a Full stack developers - 2016
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-trophy text-warning"></i>
-        
-                                Honored Person in ICT-Sharif Competition as a Programmer - 2020
-                            </li>
-        <!-- 
-                            <li>
-                                <i class="fa-li fa fa-trophy text-warning"></i>
-                                1<sup>st</sup>
-                                Honored Student in  Scientific and Practical Competitions of Vocational Schools of the Country and Permission to Enter the University without Entrance Exam
-                            </li> -->
-                           
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="publications">
-                    <div class="my-auto">
-                        <h2 class="mb-5">تألیفات</h2>
-                        <ul class="fa-ul mb-0">
-                            <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                <a href="https://doi.org/10.1109/TCC.2024.3426282">
-                                Taghinezhad-Niar, Ahmad.,& Taheri, Javid. "Security , Reliability , Cost , and Energy-aware Scheduling of Real-Time Workflows in Compute-Continuum Environments." IEEE Transactions on Cloud Computing (2024).
-                                JCR-Q1, IF: 6.5
-                            </a>
-                            <li>
-                            <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                <a href="https://doi.org/10.1109/TCC.2022.3223869">
-                                Taghinezhad-Niar, Ahmad.,& Taheri, Javid. "Reliability, Rental-Cost and Energy-Aware Multi-Workflow Scheduling on Multi-Cloud Systems" IEEE Transactions on Cloud Computing (2023).
-                            </a>
-                            <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                <a href="https://doi.org/10.1007/s10586-022-03600-8">
-                                Taghinezhad-Niar, Ahmad., Pashazadeh, Saeid., & Taheri, Javid. "QoS-aware online scheduling of multiple workflows under task execution time uncertainty in clouds." Cluster Computing, Springer (2022).
-                            </a>
-                            </li>
-                                                <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                <a href="https://doi.org/10.1007/s00607-021-01030-9">
-                                Taghinezhad-Niar, Ahmad., Pashazadeh, Saeid. , & Taheri, Javid. "Energy-efficient workflow scheduling with budget-deadline constraints for cloud." Computing, Springer (2022).
-                                </a>
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                   <a href="https://doi.org/10.1007/s10586-021-03314-3">
-                                Taghinezhad-Niar, Ahmad, Saeid Pashazadeh, and Javid Taheri. "Workflow scheduling of scientific workflows under
-                                simultaneous deadline and budget constraints." Cluster Computing, Springer (2021): 1-19.
-                                   </a>
-                            </li>
-                            
-                            <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                <a href="#">
-                                Taghinezhad-Niar, A., & Valizadeh, P. “A Fault Tolerant Multi-Controller Framework for SDN DDoS Attacks Detection”. International Journal of Web Research (2022).
-                            </a>
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                <a href="https://doi.org/10.1109/ICWR61162.2024.10533365">
-                                    Taghinezhad-Niar, A. (2024). A Client-Centric Consistency Model for Distributed Data Stores using Colored Petri Nets. 2024 10th International Conference on Web Research (ICWR), 309–314. 
-                                </a>
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                <a href="#">
-                                Taghinezhad-Niar, A., & Valizadeh, P.  “DDoS Attacks Detection in Multi-Controller Based 
-                                Software Defined Network”. 8th International Conference on Web Research, ICWR 2022. IEEE.
-                            </a>
-                            </li>
-        
-                            <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                <a href="https://doi.org/10.1109/IKT.2016.7777791">
-                                Taghinezhad-Niar, A., & Pashazadeh, S. (2016, September). “Modelling and analysis of the monotonic read consistent distributed system using coloured Petri net”. In Information and Knowledge Technology (IKT), 2016 Eighth International Conference on (pp. 85-90). IEEE.
-                            </a>
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-bookmark text-warning"></i>
-                                <a href="https://doi.org/10.1109/KBEI.2017.8324866">
-                                Taghinezhad-Niar, A. & Javadzadeh, T & Farzinvash, L. 2017. “Modeling of Resource Monitoring in Federated Cloud using Colored Petri Net”. Knowledge-Based Engineering and Innovation (KBEI), 2017 4th International Conference on IEEE.
-                                </a>
-                            </li>
-
-
-                            
-
-                        </ul>
-                    </div>
-                </section>
-
-          
-
+                <div class="social-icons">
+                    <a href="https://telegram.me/ahmad_t93" class="social-icon">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ahmad-taghinezhad/" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <main class="main-content">
+        <!-- Research Interests Section -->
+        <section class="section" id="research">
+            <h2 class="section-title" data-aos="fade-up">علایق پژوهشی</h2>
+            <div class="research-list">
+                <div class="research-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>الگوریتم‌های زمان‌بندی (Scheduling Algorithms)</h3>
+                    <p>بررسی و بهینه‌سازی الگوریتم‌ها برای مدیریت منابع زمانی در سیستم‌ها و توسعه روش‌های جدید برای زمان‌بندی کارایی در محیط‌های مختلف محاسباتی.</p>
+                </div>
+                
+                <div class="research-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>سیستم‌های توزیع‌شده (Distributed Systems)</h3>
+                    <p>مطالعه و تحقیق در زمینه سیستم‌هایی که اطلاعات و وظایف را بین چندین دستگاه یا کامپیوتر به اشتراک می‌گذارند و بررسی چالش‌های مربوط به هماهنگی و قابلیت اطمینان.</p>
+                </div>
+                
+                <div class="research-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>محاسبات ابری و مه و لبه (Cloud and Edge/Fog Computing)</h3>
+                    <p>مطالعه مفاهیم مرتبط با محاسبات ابری، انواع سرویس‌های ابری و مشکلات مرتبط با امنیت، مقیاس‌پذیری و بهینه‌سازی عملکرد در این محیط‌ها.</p>
+                </div>
+                
+                <div class="research-item" data-aos="fade-up" data-aos-delay="400">
+                    <h3>الگوریتم‌های بهینه‌سازی و کیفیت خدمات (QoS)</h3>
+                    <p>این حوزه بر توسعه و کاربرد الگوریتم‌هایی برای بهینه‌سازی پارامترهای مختلف در سیستم‌های رایانه‌ای، تضمین بهره‌وری انرژی، قابلیت اطمینان و امنیت تمرکز دارد.</p>
+                </div>
+                
+                <div class="research-item" data-aos="fade-up" data-aos-delay="500">
+                    <h3>روش‌های رسمی و مدل‌سازی سامانه‌های کامپیوتری (Formal Methods)</h3>
+                    <p>استفاده از روش‌های ریاضی و مدل‌سازی برای تحلیل و بهبود سامانه‌های کامپیوتری، شامل تأیید صحت و بررسی ویژگی‌های سیستم‌ها.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <!-- <section class="section" id="skills">
+            <h2 class="section-title" data-aos="fade-up">مهارت‌ها و ابزار</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>زبان‌های برنامه‌نویسی و ابزار</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <i class="fas fa-code"></i>
+                            <span>Cloudsim & Workflowsim: Java</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-cogs"></i>
+                            <span>CPN-TOOLS & Colored Petri net tools: ML Language</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-java"></i>
+                            <span>Eclipse & Netbeans: JAVA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Visual Studio: ASP.NET & C#.NET & C++</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-calculator"></i>
+                            <span>MATLAB</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="tech-icons">
+                        <span class="tech-icon" title="Java"><i class="fab fa-java"></i></span>
+                        <span class="tech-icon" title="JavaScript"><i class="fab fa-js"></i></span>
+                        <span class="tech-icon" title="Python"><i class="fab fa-python"></i></span>
+                        <span class="tech-icon" title="CSS3"><i class="fab fa-css3-alt"></i></span>
+                        <span class="tech-icon" title="Bootstrap"><i class="fab fa-bootstrap"></i></span>
+                        <span class="tech-icon" title="Database"><i class="fas fa-database"></i></span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>روش‌های کاری</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>طراحی ریسپانسیو و موبایل محور</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-users"></i>
+                            <span>مدیریت تیم و پروژه</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-sync-alt"></i>
+                            <span>توسعه چابک (Agile) و اسکرام</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-search"></i>
+                            <span>تحقیق و توسعه</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>تدریس و آموزش</span>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+        </section>
+
+        <!-- Publications Section -->
+        <section class="section" id="publications">
+            <h2 class="section-title" data-aos="fade-up">تألیفات و انتشارات</h2>
+            <div class="publications-grid">
+                
+                <article class="publication-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="publication-type">مقاله مجله</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1109/TSC.2025.3599497">
+                            Fault-Tolerant Cost-Efficient Scheduling for Energy and Deadline-Constrained IoT Workflows in Edge-Cloud Continuum
+                        </a>
+                    </h3>
+                    <p><strong>نویسندگان:</strong> احمد تقی‌نژاد نیار و جاوید طاهری</p>
+                    <p><strong>مجله:</strong> IEEE Transactions on Services Computing (2025)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">JCR-Q1</span>
+                        <span class="publication-badge">IF: 8.1</span>
+                    </div>
+                </article>
+
+                <article class="publication-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="publication-type">مقاله مجله</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1109/TCC.2024.3426282">
+                            Security, Reliability, Cost, and Energy-aware Scheduling of Real-Time Workflows in Compute-Continuum Environments
+                        </a>
+                    </h3>
+                    <p><strong>نویسندگان:</strong> احمد تقی‌نژاد نیار و جاوید طاهری</p>
+                    <p><strong>مجله:</strong> IEEE Transactions on Cloud Computing (2024)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">JCR-Q1</span>
+                        <span class="publication-badge">IF: 6.5</span>
+                    </div>
+                </article>
+
+                <article class="publication-card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="publication-type">مقاله مجله</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1109/TCC.2022.3223869">
+                            Reliability, Rental-Cost and Energy-Aware Multi-Workflow Scheduling on Multi-Cloud Systems
+                        </a>
+                    </h3>
+                    <p><strong>نویسندگان:</strong> احمد تقی‌نژاد نیار و جاوید طاهری</p>
+                    <p><strong>مجله:</strong> IEEE Transactions on Cloud Computing (2023)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">JCR-Q1</span>
+                        <span class="publication-badge">IF: 6.5</span>
+                    </div>
+                </article>
+
+                <article class="publication-card" data-aos="fade-up" data-aos-delay="400">
+                    <span class="publication-type">مقاله مجله</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1007/s10586-022-03600-8">
+                            QoS-aware online scheduling of multiple workflows under task execution time uncertainty in clouds
+                        </a>
+                    </h3>
+                    <p><strong>نویسندگان:</strong> احمد تقی‌نژاد نیار، سعید پاشازاده و جاوید طاهری</p>
+                    <p><strong>مجله:</strong> Cluster Computing, Springer (2022)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">JCR-Q1</span>
+                        <span class="publication-badge">IF: 4.4</span>
+                    </div>
+                </article>
+                   <article class="publication-card" data-aos="fade-up" data-aos-delay="400">
+                    <span class="publication-type">مقاله مجله</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1007/s10586-021-03314-3">
+                         Workflow scheduling of scientific workflows under simultaneous deadline and budget constraints
+                        </a>
+                    </h3>
+                    <p><strong>نویسندگان:</strong> احمد تقی‌نژاد نیار، سعید پاشازاده و جاوید طاهری</p>
+                    <p><strong>مجله:</strong> Cluster Computing, Springer (2021)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">JCR-Q1</span>
+                        <span class="publication-badge">IF: 4.4</span>
+                    </div>
+                </article>
+                 <article class="publication-card" data-aos="fade-up" data-aos-delay="400">
+                    <span class="publication-type">مقاله مجله</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1007/s00607-021-01030-9">
+                        Energy-efficient workflow scheduling with budget-deadline constraints for cloud
+                        </a>
+                    </h3>
+                    <p><strong>نویسندگان:</strong> احمد تقی‌نژاد نیار، سعید پاشازاده و جاوید طاهری</p>
+                    <p><strong>مجله:</strong> Cluster Computing, Springer (2022)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">JCR-Q1</span>
+                        <span class="publication-badge">IF: 4.4</span>
+                    </div>
+                </article>
 
 
-    
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                  <article class="publication-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="publication-type">مقاله مجله</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.22133/ijwr.2024.482725.1241">
+                       State-Space Analysis and Complexity Assessment of Puzzle Games Using Colored Petri Nets
+                        </a>
+                    </h3>
+                    <p><strong>نویسندگان:</strong> احمد تقی‌نژاد نیار </p>
+                    <p><strong>مجله:</strong> International Journal of Web Research(2024)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">ISC</span>
+                    </div>
+                </article>
+                    <article class="publication-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="publication-type">مقاله مجله</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1109/TSC.2025.3599497">
+                  A Fault Tolerant Multi-Controller Framework for SDN DDoS Attacks Detection
+                        </a>
+                    </h3>
+                    <p><strong>نویسندگان:</strong> احمد تقی‌نژاد نیار </p>
+                    <p><strong>مجله:</strong> International Journal of Web Research(2022)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">ISC</span>
+                    </div>
+                </article>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
+                <article class="publication-card" data-aos="fade-up" data-aos-delay="500">
+                    <span class="publication-type">مقاله کنفرانس</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1109/ICWR61162.2024.10533365">
+                            A Client-Centric Consistency Model for Distributed Data Stores using Colored Petri Nets
+                        </a>
+                    </h3>
+                    <p><strong>نویسنده:</strong> احمد تقی‌نژاد نیار</p>
+                    <p><strong>کنفرانس:</strong> 2024 10th International Conference on Web Research (ICWR)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">IEEE Conference</span>
+                    </div>
+                </article>
+
+                <article class="publication-card" data-aos="fade-up" data-aos-delay="500">
+                    <span class="publication-type">مقاله کنفرانس</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1109/ICWR54782.2022.9786246">
+                            DDoS Attacks Detection in Multi-Controller Based Software Defined Network
+                        </a>
+                    </h3>
+                    <p><strong>نویسنده:</strong> احمد تقی‌نژاد نیار</p>
+                    <p><strong>کنفرانس:</strong> 2022 8th International Conference on Web Research (ICWR)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">IEEE Conference</span>
+                    </div>
+                </article>
+                <article class="publication-card" data-aos="fade-up" data-aos-delay="500">
+                    <span class="publication-type">مقاله کنفرانس</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1109/KBEI.2017.8324866">
+                          Modeling of resource monitoring in federated cloud using Colored Petri Net
+                        </a>
+                    </h3>
+                    <p><strong>نویسنده:</strong> احمد تقی‌نژاد نیار</p>
+                    <p><strong>کنفرانس:</strong> 2017 IEEE 4th International Conference on Knowledge-Based Engineering and Innovation (KBEI)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">IEEE Conference</span>
+                    </div>
+                </article>
+
+                <article class="publication-card" data-aos="fade-up" data-aos-delay="600">
+                    <span class="publication-type">مقاله کنفرانس</span>
+                    <h3 class="publication-title">
+                        <a href="https://doi.org/10.1109/IKT.2016.7777791">
+                            Modelling and analysis of the monotonic read consistent distributed system using coloured Petri net
+                        </a>
+                    </h3>
+                    <p><strong>نویسندگان:</strong> احمد تقی‌نژاد نیار و سعید پاشازاده</p>
+                    <p><strong>کنفرانس:</strong> 2016 Eighth International Conference on Information and Knowledge Technology (IKT)</p>
+                    <div class="publication-meta">
+                        <span class="publication-badge">IEEE Conference</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="section" id="awards">
+            <h2 class="section-title" data-aos="fade-up">جوایز و گواهینامه‌ها</h2>
+            <div class="awards-grid">
+                
+                <div class="award-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="award-content">
+                        <h3> جایزه طرح جذب بنیاد ملی نخبگان  </h3>
+                        <p>دریافت جایزه طرح جذب  از طریق  بنیاد ملی نخبگان ایران، ۱۴۰۲</p>
+                    </div>
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                </div>
+
+                <div class="award-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="award-content">
+                        <h3>جایزه صیاد شیرازی</h3>
+                        <p>دریافت جایزه صیاد شیرازی از بنیاد ملی نخبگان ایران، ۱۴۰۱</p>
+                    </div>
+                    <div class="award-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                </div>
+
+                <div class="award-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="award-content">
+                        <h3>پذیرش به عنوان استعداد برتر</h3>
+                        <p>پذیرش به عنوان استعداد برتر دوره دکتری، ۱۴۰۰</p>
+                    </div>
+                    <div class="award-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="award-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="award-content">
+                        <h3>تجربه بین‌المللی</h3>
+                        <p>شرکت در پروژه اراسموس اتحادیه اروپا، دانشگاه بن، آلمان، بهمن ۱۳۹۶</p>
+                    </div>
+                    <div class="award-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+
+                <div class="award-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="award-content">
+                        <h3>برترین دانشجو</h3>
+                        <p>رتبه اول دکتری مهندسی کامپیوتر ۱۳۹۶-۱۴۰۰<br>
+                           رتبه دوم کارشناسی ارشد مهندسی نرم‌افزار ۱۳۹۴-۱۳۹۶<br>
+                           دانشجوی برتر کارشناسی مهندسی نرم‌افزار</p>
+                    </div>
+                    <div class="award-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+
+                <div class="award-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="award-content">
+                        <h3>مسابقات برنامه‌نویسی</h3>
+                        <p>برگزیده مسابقات دوره‌ای فناوری ایران (فن‌آورد) به عنوان توسعه‌دهنده فول استک - ۱۳۹۵<br>
+                           برگزیده مسابقات ICT-شریف به عنوان برنامه‌نویس - ۱۳۹۹</p>
+                    </div>
+                    <div class="award-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="main-content">
+                <h2 class="section-title" data-aos="fade-up">تماس با من</h2>
+                <div class="contact-container">
+                    <div class="contact-info-section" data-aos="fade-right">
+                        <div class="info-card">
+                            <h3><i class="fas fa-envelope"></i> آدرس ایمیل</h3>
+                            <ul class="info-list">
+                                <li>
+                                    <span>a0taghinezhad@gmail.com</span>
+                                    <i class="fas fa-at"></i>
+                                </li>
+                                <li>
+                                    <span>a.taghinezhad@tabrizu.ac.ir</span>
+                                    <i class="fas fa-at"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3><i class="fas fa-map-marker-alt"></i> آدرس</h3>
+                            <ul class="info-list">
+                                <li>
+                                    <span>دانشگاه تبریز<br>دانشکده مهندسی برق و کامپیوتر<br>تبریز، ایران</span>
+                                    <i class="fas fa-university"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3><i class="fas fa-link"></i> پیوندها</h3>
+                            <ul class="info-list">
+                                <li>
+                                    <a href="https://orcid.org/0000-0003-2353-9335" style="color: var(--text-primary); text-decoration: none;">پروفایل ORCID</a>
+                                    <i class="fab fa-orcid"></i>
+                                </li>
+                                <li>
+                                    <a href="https://faculty.tabrizu.ac.ir/a-taghinezhad/fa" style="color: var(--text-primary); text-decoration: none;">صفحه دانشگاه</a>
+                                    <i class="fas fa-university"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3><i class="fas fa-share-alt"></i> شبکه‌های اجتماعی</h3>
+                            <div class="social-icons" style="justify-content: flex-end; margin-top: 1rem;">
+                                <a href="https://telegram.me/ahmad_t93" class="social-icon">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ahmad-taghinezhad/" class="social-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form" data-aos="fade-left">
+                        <h3 style="margin-bottom: 2rem; color: var(--primary-color); text-align: right;">پیام خود را ارسال کنید</h3>
+                         <form method="POST" action="https://formsubmit.co/947dd729cec1f46c27b9bd6a5f6f49b9"
+                                enctype="multipart/form-data">
+                                 <div class="form-group">
+                                <input type="email" class="form-control" required name="email"
+                                    placeholder="ایمیل خود را بنویسید, myname@gmail.com">
+                                    </div><br>
+                                <input type="hidden" name="_next" value="https://ataghinezhad.github.io/response.html">
+                                    <div class="form-group">
+                                <textarea name="message" class="form-control" style="width: 700px;min-height: 200px;"
+                                    placeholder="جزئیات درخواست"></textarea></div>
+                                <input type="hidden" class="form-control-file"><br>
+                                
+                                <button class="submit-btn" type="submit">ارسال</button>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; ۱۴۰۴ دکتر احمد تقی‌نژاد نیار. تمامی حقوق محفوظ است.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                استادیار مهندسی کامپیوتر، دانشگاه تبریز
+            </p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        
+
+        // Add some interactive effects
+        document.querySelectorAll('.publication-card, .award-card, .research-item, .skill-category').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+            if (navMenu.classList.contains('show')) {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '70px';
+                navMenu.style.right = '0';
+                navMenu.style.left = '0';
+                navMenu.style.background = 'white';
+                navMenu.style.padding = '1rem';
+                navMenu.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            } else {
+                navMenu.style.display = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                navMenu.classList.remove('show');
+                navMenu.style.display = '';
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navMenu.style.display = '';
+                navMenu.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>
