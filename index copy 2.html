@@ -1,0 +1,1536 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="B5YPhrkDGmtsv-eJi7Gr-svLdizsSWRBcEDOHNNgdO0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Dr. Ahmad Taghinezhad-Niar – Assistant Professor of Computer Engineering at University of Tabriz. Research in distributed systems, scheduling, cloud computing, and formal methods." />
+    <meta name="author" content="Dr. Ahmad Taghinezhad-Niar" />
+    <meta name="keywords" content="Ahmad Taghinezhad, distributed systems, cloud computing, scheduling algorithms, formal methods, University of Tabriz" />
+    <title>Dr. Ahmad Taghinezhad-Niar · Professor of Computer Engineering</title>
+    <link rel="shortcut icon" href="img/logo.png" />
+
+    <!-- ========== FONTS ========== -->
+    <!-- Inter: clean, modern sans-serif; Roboto Slab: academic serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (free) for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Bootstrap 5 (lightweight grid & components) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        /* ============================================================
+                   1.  CSS CUSTOM PROPERTIES (Design Tokens)
+                   ============================================================ */
+        :root {
+            /* Primary palette – navy & slate */
+            --color-primary: #0a2a44;
+            --color-primary-light: #1a3f6a;
+            --color-primary-dark: #061c30;
+            --color-accent: #2a7de1;
+            --color-accent-hover: #1a5fb4;
+            --color-slate: #2c3e50;
+            --color-slate-light: #5a7a96;
+            --color-gray-100: #f8f9fa;
+            --color-gray-200: #e9ecef;
+            --color-gray-300: #dee2e6;
+            --color-gray-600: #6c757d;
+            --color-gray-800: #343a40;
+            --color-white: #ffffff;
+            --color-text: #1e2a3a;
+
+            /* Typography */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-serif: 'Roboto Slab', 'Times New Roman', serif;
+
+            /* Spacing */
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+
+            /* Border radius */
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+
+            /* Shadows */
+            --shadow-card: 0 2px 12px rgba(10, 42, 68, 0.08);
+            --shadow-card-hover: 0 6px 24px rgba(10, 42, 68, 0.12);
+            --shadow-nav: 0 2px 20px rgba(10, 42, 68, 0.15);
+
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-med: 0.3s ease;
+            --transition-slow: 0.4s ease;
+        }
+
+        /* ============================================================
+                   2.  RESET & BASE
+                   ============================================================ */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text);
+            background: var(--color-gray-100);
+            line-height: 1.7;
+            padding-top: 60px;
+            /* space for mobile nav */
+        }
+
+        /* ============================================================
+                   3.  TYPOGRAPHY
+                   ============================================================ */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            color: var(--color-primary);
+            letter-spacing: -0.01em;
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+        }
+        h2 {
+            font-size: 2.0rem;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
+        h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 3px solid var(--color-primary);
+            padding-bottom: 0.6rem;
+            margin-bottom: 1.8rem;
+        }
+        .section-title i {
+            color: var(--color-accent);
+            font-size: 1.6rem;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        a:hover {
+            color: var(--color-accent-hover);
+            text-decoration: underline;
+        }
+
+        .text-muted {
+            color: var(--color-gray-600) !important;
+        }
+
+        /* ============================================================
+                   4.  SIDEBAR / NAVIGATION
+                   ============================================================ */
+        .navbar-custom {
+            background: var(--color-primary) !important;
+            box-shadow: var(--shadow-nav);
+            padding: 0.6rem 1.2rem;
+            transition: background var(--transition-med);
+        }
+
+        .navbar-custom .navbar-brand {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            color: var(--color-white) !important;
+            font-size: 1.25rem;
+            letter-spacing: 0.02em;
+        }
+        .navbar-custom .navbar-brand small {
+            font-weight: 300;
+            font-size: 0.75rem;
+            opacity: 0.8;
+            display: block;
+            font-family: var(--font-sans);
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: var(--radius-sm);
+            transition: background var(--transition-fast), color var(--transition-fast);
+        }
+        .navbar-custom .navbar-nav .nav-link:hover,
+        .navbar-custom .navbar-nav .nav-link:focus {
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--color-white) !important;
+        }
+        .navbar-custom .navbar-nav .nav-link i {
+            margin-right: 0.4rem;
+            width: 1.2rem;
+            text-align: center;
+        }
+
+        /* Mobile toggler */
+        .navbar-custom .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.3);
+            color: var(--color-white);
+            padding: 0.3rem 0.7rem;
+        }
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Desktop sidebar variant */
+        @media (min-width: 992px) {
+            body {
+                padding-top: 0;
+                padding-left: 280px;
+            }
+            .navbar-custom {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 280px;
+                height: 100vh;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 1.5rem 1rem;
+                box-shadow: 2px 0 20px rgba(0, 0, 0, 0.12);
+                overflow-y: auto;
+                background: var(--color-primary) !important;
+                z-index: 1030;
+            }
+            .navbar-custom .navbar-brand {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                padding: 0.5rem;
+            }
+            .navbar-custom .navbar-brand .brand-img {
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                border: 3px solid rgba(255, 255, 255, 0.25);
+                object-fit: cover;
+                margin-bottom: 0.6rem;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                background: var(--color-white);
+                padding: 3px;
+            }
+            .navbar-custom .navbar-collapse {
+                flex-grow: 0;
+                width: 100%;
+            }
+            .navbar-custom .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.15rem;
+            }
+            .navbar-custom .navbar-nav .nav-link {
+                padding: 0.6rem 1rem;
+                border-radius: var(--radius-sm);
+                font-size: 0.9rem;
+            }
+            .navbar-custom .navbar-toggler {
+                display: none;
+            }
+            .nav-footer {
+                margin-top: auto;
+                padding-top: 1rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.12);
+                text-align: center;
+                font-size: 0.7rem;
+                color: rgba(255, 255, 255, 0.5);
+            }
+            .nav-footer a {
+                color: rgba(255, 255, 255, 0.7);
+            }
+            .nav-footer a:hover {
+                color: var(--color-white);
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-custom .navbar-brand .brand-img {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                margin-right: 0.6rem;
+            }
+            .navbar-custom .navbar-brand {
+                display: flex;
+                align-items: center;
+            }
+            .navbar-custom .navbar-collapse {
+                background: var(--color-primary-dark);
+                border-radius: var(--radius-md);
+                padding: 0.8rem;
+                margin-top: 0.6rem;
+            }
+            .nav-footer {
+                display: none;
+            }
+        }
+
+        /* ============================================================
+                   5.  MAIN CONTENT LAYOUT
+                   ============================================================ */
+        .main-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.2rem 1.2rem 3rem;
+        }
+
+        /* ============================================================
+                   6.  CARDS & SECTIONS
+                   ============================================================ */
+        .section-card {
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card);
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            transition: box-shadow var(--transition-med), transform var(--transition-fast);
+            border: 1px solid var(--color-gray-200);
+        }
+        .section-card:hover {
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        /* ============================================================
+                   7.  COLLAPSIBLE SECTIONS  (details/summary)
+                   ============================================================ */
+        details.collapsible-section {
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        details.collapsible-section summary {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            cursor: pointer;
+            padding: 0.6rem 0;
+            list-style: none;
+            user-select: none;
+            transition: color var(--transition-fast);
+            border-bottom: 2px solid transparent;
+        }
+        details.collapsible-section summary::-webkit-details-marker {
+            display: none;
+        }
+        details.collapsible-section summary::before {
+            content: '\f0fe';
+            /* fa-plus-square */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: var(--color-accent);
+            transition: transform var(--transition-med);
+            margin-right: 0.2rem;
+            width: 1.4rem;
+            text-align: center;
+        }
+        details.collapsible-section[open] summary::before {
+            content: '\f146';
+            /* fa-minus-square */
+            font-weight: 400;
+        }
+        details.collapsible-section summary:hover {
+            color: var(--color-accent-hover);
+        }
+        details.collapsible-section .collapse-content {
+            padding-top: 1rem;
+            animation: fadeSlideIn var(--transition-med) ease;
+        }
+
+        @keyframes fadeSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* When used inside a card, adjust spacing */
+        .section-card details.collapsible-section summary {
+            font-size: 1.1rem;
+            padding: 0.4rem 0;
+        }
+        .section-card details.collapsible-section .collapse-content {
+            padding-top: 0.6rem;
+        }
+
+        /* ============================================================
+                   8.  PROFILE / BIO
+                   ============================================================ */
+        .profile-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        .profile-avatar {
+            flex-shrink: 0;
+        }
+        .profile-avatar img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--color-primary);
+            box-shadow: 0 4px 16px rgba(10, 42, 68, 0.15);
+        }
+        .profile-titles h1 {
+            margin-bottom: 0.2rem;
+        }
+        .profile-titles .position {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--color-slate-light);
+            margin-bottom: 0.3rem;
+        }
+        .profile-titles .institution {
+            font-size: 1rem;
+            color: var(--color-gray-600);
+        }
+        .profile-titles .institution a {
+            color: var(--color-accent);
+        }
+
+        .profile-bio {
+            margin-top: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--color-slate);
+        }
+        .profile-bio strong {
+            color: var(--color-primary);
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+        .research-tags .tag {
+            background: var(--color-gray-200);
+            padding: 0.25rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--color-primary);
+            letter-spacing: 0.01em;
+            transition: background var(--transition-fast), color var(--transition-fast);
+        }
+        .research-tags .tag:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.6rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-gray-200);
+        }
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.95rem;
+            color: var(--color-slate);
+            transition: color var(--transition-fast);
+        }
+        .contact-links a:hover {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+        .contact-links a i {
+            font-size: 1.2rem;
+            width: 1.4rem;
+            text-align: center;
+            color: var(--color-primary);
+        }
+        .contact-links .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-gray-200);
+            color: var(--color-primary);
+            transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+            font-size: 1.2rem;
+        }
+        .contact-links .social-icon:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        /* ============================================================
+                   9.  PUBLICATIONS
+                   ============================================================ */
+        .pub-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-gray-200);
+            transition: background var(--transition-fast);
+        }
+        .pub-item:last-child {
+            border-bottom: 0;
+        }
+        .pub-item .pub-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--color-primary);
+            margin-bottom: 0.15rem;
+        }
+        .pub-item .pub-authors {
+            font-size: 0.92rem;
+            color: var(--color-slate);
+        }
+        .pub-item .pub-venue {
+            font-size: 0.85rem;
+            color: var(--color-gray-600);
+            font-style: italic;
+        }
+        .pub-item .pub-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.2rem;
+            margin-top: 0.3rem;
+            font-size: 0.8rem;
+        }
+        .pub-item .pub-meta .badge-metric {
+            background: var(--color-gray-200);
+            padding: 0.1rem 0.6rem;
+            border-radius: 12px;
+            color: var(--color-slate);
+            font-weight: 500;
+        }
+        .pub-item .pub-meta .badge-metric.q1 {
+            background: #d4edda;
+            color: #155724;
+        }
+        .pub-item .pub-meta .badge-metric.q2 {
+            background: #cce5ff;
+            color: #004085;
+        }
+        .pub-item .pub-meta .badge-metric.isc {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .pub-item .pub-links {
+            margin-top: 0.4rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+        }
+        .pub-item .pub-links a {
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .pub-item .pub-links a i {
+            font-size: 0.9rem;
+        }
+
+        /* ============================================================
+                   10. AWARDS & REVIEWS
+                   ============================================================ */
+        .award-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .award-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--color-gray-200);
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+        }
+        .award-list li:last-child {
+            border-bottom: 0;
+        }
+        .award-list li i {
+            color: #f1c40f;
+            font-size: 1.2rem;
+            margin-top: 0.15rem;
+            min-width: 1.4rem;
+            text-align: center;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.8rem;
+        }
+        .review-grid .review-item {
+            background: var(--color-gray-100);
+            border-radius: var(--radius-sm);
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
+            border: 1px solid var(--color-gray-200);
+            transition: background var(--transition-fast), border-color var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .review-grid .review-item:hover {
+            background: var(--color-white);
+            border-color: var(--color-accent);
+        }
+        .review-grid .review-item .rank-badge {
+            font-weight: 600;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 10px;
+            background: var(--color-gray-300);
+            color: var(--color-gray-800);
+            flex-shrink: 0;
+        }
+        .review-grid .review-item .rank-badge.q1 {
+            background: #d4edda;
+            color: #155724;
+        }
+        .review-grid .review-item .rank-badge.q2 {
+            background: #cce5ff;
+            color: #004085;
+        }
+        .review-grid .review-item .rank-badge.q3 {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* ============================================================
+                   11. CONTACT FORM
+                   ============================================================ */
+        .contact-form .form-control {
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--color-gray-300);
+            padding: 0.7rem 1rem;
+            font-size: 0.95rem;
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        .contact-form .form-control:focus {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(42, 125, 225, 0.15);
+        }
+        .contact-form .btn-submit {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border: 0;
+            padding: 0.6rem 2rem;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            transition: background var(--transition-fast), transform var(--transition-fast);
+        }
+        .contact-form .btn-submit:hover {
+            background: var(--color-primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================================
+                   12. RESPONSIVE UTILITIES
+                   ============================================================ */
+        @media (max-width: 576px) {
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-titles h1 {
+                font-size: 2.0rem;
+            }
+            .section-card {
+                padding: 1.2rem 1rem;
+            }
+            .review-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-links {
+                justify-content: center;
+            }
+        }
+        @media (min-width: 577px) and (max-width: 991.98px) {
+            .profile-header {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        /* ============================================================
+                   13. PRINT STYLES (CV-friendly)
+                   ============================================================ */
+        @media print {
+            .navbar-custom {
+                display: none !important;
+            }
+            body {
+                padding: 0 !important;
+                background: white;
+            }
+            .section-card {
+                box-shadow: none !important;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+            .section-card:hover {
+                box-shadow: none !important;
+            }
+            details.collapsible-section summary::before {
+                display: none;
+            }
+            details.collapsible-section .collapse-content {
+                display: block !important;
+                animation: none !important;
+            }
+            .contact-links .social-icon {
+                background: #eee !important;
+            }
+            .main-content {
+                max-width: 100%;
+                padding: 0.5in;
+            }
+        }
+
+        /* ============================================================
+                   14. MISC HELPERS
+                   ============================================================ */
+        .text-primary-custom {
+            color: var(--color-primary) !important;
+        }
+        .bg-primary-custom {
+            background: var(--color-primary) !important;
+        }
+        .gap-1 {
+            gap: 0.5rem;
+        }
+        .gap-2 {
+            gap: 1rem;
+        }
+        .mt-2 {
+            margin-top: 0.8rem;
+        }
+        .mb-2 {
+            margin-bottom: 0.8rem;
+        }
+        .fw-500 {
+            font-weight: 500;
+        }
+        .fw-600 {
+            font-weight: 600;
+        }
+        .fs-small {
+            font-size: 0.85rem;
+        }
+
+        /* ============================================================
+                   15. TEACHING / STUDENTS / PROJECTS (optional sections)
+                   ============================================================ */
+        .teaching-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+        .teaching-grid .course-item {
+            background: var(--color-gray-100);
+            padding: 0.8rem 1.2rem;
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--color-accent);
+            transition: background var(--transition-fast), border-color var(--transition-fast);
+        }
+        .teaching-grid .course-item:hover {
+            background: var(--color-white);
+            border-color: var(--color-primary);
+        }
+        .teaching-grid .course-item .course-code {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .teaching-grid .course-item .course-name {
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+
+        .student-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.6rem;
+        }
+        .student-list .student-item {
+            background: var(--color-gray-100);
+            padding: 0.4rem 0.9rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .student-list .student-item i {
+            color: var(--color-accent);
+            font-size: 0.8rem;
+        }
+
+        .project-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+        .project-item:last-child {
+            border-bottom: 0;
+        }
+        .project-item .project-title {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+        .project-item .project-role {
+            font-size: 0.85rem;
+            color: var(--color-gray-600);
+        }
+        .project-item .project-desc {
+            font-size: 0.92rem;
+            margin-top: 0.2rem;
+            color: var(--color-slate);
+        }
+
+        /* CV button */
+        .btn-cv {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border: 0;
+            padding: 0.5rem 1.4rem;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background var(--transition-fast), transform var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .btn-cv:hover {
+            background: var(--color-primary-light);
+            color: var(--color-white);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+        .btn-cv i {
+            font-size: 1rem;
+        }
+
+        /* h-index / citation metrics */
+        .metric-badge {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 0.3rem;
+            background: var(--color-gray-200);
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+        .metric-badge .number {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--color-accent);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    SIDEBAR / NAVIGATION
+    ============================================================ -->
+    <nav class="navbar navbar-expand-lg navbar-custom" id="sideNav" aria-label="Main navigation">
+        <a class="navbar-brand" href="#top">
+            <!-- Profile image in sidebar (desktop) -->
+            
+            <span>
+                Dr. Taghinezhad
+                <small>Computer Engineering</small>
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user"></i>About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#research"><i class="fas fa-flask"></i>Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="#publications"><i class="fas fa-book"></i>Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="#teaching"><i class="fas fa-chalkboard-teacher"></i>Teaching</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#students"><i class="fas fa-user-graduate"></i>Students</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-project-diagram"></i>Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#awards"><i class="fas fa-trophy"></i>Awards</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="fa"><i class="fas fa-globe"></i>فارسی</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://faculty.tabrizu.ac.ir/a-taghinezhad/en" target="_blank"><i class="fas fa-university"></i>University Page</a></li>
+        </ul>
+        <!-- footer in desktop sidebar -->
+        <div class="nav-footer d-none d-lg-block">
+            &copy; 2025 · Dr. A. Taghinezhad
+        </div>
+    </div>
+</nav>
+
+<!-- ============================================================
+MAIN CONTENT
+============================================================ -->
+<div class="main-content" id="top">
+
+    <!-- ==========================================================
+    SECTION: ABOUT (Profile + Bio)
+    ========================================================== -->
+    <section id="about" aria-labelledby="about-heading">
+        <div class="section-card">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="img/ppp.jpg" alt="Dr. Ahmad Taghinezhad-Niar, Assistant Professor of Computer Engineering" />
+                </div>
+                <div class="profile-titles">
+                    <h1 id="about-heading">Ahmad Taghinezhad-Niar</h1>
+                    <div class="position">Professor of Computer Engineering</div>
+                    <div class="institution">
+                        <i class="fas fa-university"></i>
+                        <a href="https://faculty.tabrizu.ac.ir/a-taghinezhad/en" target="_blank">University of Tabriz</a>
+                        &nbsp;·&nbsp;
+                        <i class="fas fa-map-pin"></i> Tabriz, Iran
+                    </div>
+                    <!-- metrics -->
+                    <!-- <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.5rem;">
+                        <span class="metric-badge"><span class="number">12</span> h-index</span>
+                        <span class="metric-badge"><span class="number">480+</span> citations</span>
+                        <a href="#" class="btn-cv" style="padding:0.2rem 1rem;font-size:0.8rem;">
+                            <i class="fas fa-file-pdf"></i> Download CV
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="profile-bio">
+                
+              <div class="profile-info">
+  <p>
+    <strong>Assistant Professor</strong>, Department of Computer Engineering<br>
+
+  </p>
+
+  <p>
+    <strong>Director</strong>, Distributed Intelligent Systems (DIS) Lab<br>    Faculty of Electrical and Computer Engineering, University of Tabriz
+  </p>
+<section class="research-interests">
+  <h3>Research Interests</h3>
+  <ul>
+    <li>Distributed Systems</li>
+    <li>Cloud–Edge–Continuum Computing and SDN networks</li>
+    <li>Task and Workflow Scheduling and Resource Management</li>
+    <li>Optimization problems</li>
+    <li>Reliable, Secure, and Energy-Efficient Computing</li>
+    <li>Formal Verification</li>
+  </ul>
+</section>
+
+  <h3>Contact Information</h3>
+  <ul>
+    <li><strong>Office:</strong> Room 344, Faculty of Electrical and Computer Engineering, University of Tabriz</li>
+    <li><strong>Telephone:</strong> +98-4133393704</li>
+    <li><strong>Telegram:</strong> @ataghinezhad</li>
+  </ul>
+  
+
+
+</div>
+
+
+               
+
+                <!-- Contact links -->
+                <div class="contact-links">
+                    <a href="mailto:a0taghinezhad@gmail.com" aria-label="Email (Gmail)">
+                        <i class="fas fa-envelope"></i> a0taghinezhad@gmail.com
+                    </a>
+                    <a href="mailto:a.taghinezhad@tabrizu.ac.ir" aria-label="Email (University)">
+                        <i class="fas fa-envelope"></i> a.taghinezhad@tabrizu.ac.ir
+                    </a>
+                    <a href="https://www.linkedin.com/in/ahmad-taghinezhad/" target="_blank" aria-label="LinkedIn">
+                        <span class="social-icon"><i class="fab fa-linkedin-in"></i></span>
+                    </a>
+                    <a href="https://faculty.tabrizu.ac.ir/a-taghinezhad/en" target="_blank" aria-label="University profile">
+                        <span class="social-icon"><i class="fas fa-university"></i></span>
+                    </a>
+                    <a href="https://orcid.org/0000-0003-2353-9335" target="_blank" aria-label="ORCID">
+                        <span class="social-icon"><i class="fab fa-orcid"></i></span>
+                    </a>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    SECTION: RESEARCH HIGHLIGHTS (collapsible)
+    ========================================================== -->
+    <section id="research" aria-labelledby="research-heading">
+        <div class="section-card">
+            <details class="collapsible-section" open>
+                <summary id="research-heading">
+                    <i class="fas fa-flask" style="color:var(--color-accent);"></i>
+                    Research Highlights
+                </summary>
+                <div class="collapse-content">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;">
+                        <div style="background:var(--color-gray-100);padding:1rem;border-radius:var(--radius-sm);border-left:4px solid var(--color-accent);">
+                            <h4 style="font-size:1rem;margin-bottom:0.2rem;font-family:var(--font-sans);font-weight:600;">Task/ Workflow Scheduling</h4>
+                            <p style="font-size:0.9rem;color:var(--color-slate);margin:0;">Cost‑efficient, fault‑tolerant, and energy‑aware scheduling for IoT and cloud workflows.</p>
+                        </div>
+                    
+                        <div style="background:var(--color-gray-100);padding:1rem;border-radius:var(--radius-sm);border-left:4px solid var(--color-accent);">
+                            <h4 style="font-size:1rem;margin-bottom:0.2rem;font-family:var(--font-sans);font-weight:600;">Edge‑Cloud Continuum</h4>
+                            <p style="font-size:0.9rem;color:var(--color-slate);margin:0;">Scalable architectures bridging edge and cloud with QoS and security guarantees.</p>
+                        </div>
+                        <div style="background:var(--color-gray-100);padding:1rem;border-radius:var(--radius-sm);border-left:4px solid var(--color-accent);">
+                            <h4 style="font-size:1rem;margin-bottom:0.2rem;font-family:var(--font-sans);font-weight:600;">AI for Industry</h4>
+                            <p style="font-size:0.9rem;color:var(--color-slate);margin:0;">Developing practical AI‑powered applications with a focus on distributed intelligence.</p>
+                        </div>
+ <div style="background:var(--color-gray-100);padding:1rem;border-radius:var(--radius-sm);border-left:4px solid var(--color-accent);">
+        <h4 style="font-size:1rem;margin-bottom:0.2rem;font-family:var(--font-sans);font-weight:600;">Optimization &amp; SDN Networks</h4>
+        <p style="font-size:0.9rem;color:var(--color-slate);margin:0;">Mathematical optimization and software‑defined networking for dynamic resource allocation, traffic engineering, and network security.</p>
+    </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    SECTION: PUBLICATIONS (collapsible)
+    ========================================================== -->
+    <section id="publications" aria-labelledby="pubs-heading">
+        <div class="section-card">
+            <details class="collapsible-section" open>
+                <summary id="pubs-heading">
+                    <i class="fas fa-book" style="color:var(--color-accent);"></i>
+                    Publications
+                    <span style="font-family:var(--font-sans);font-weight:400;font-size:0.75rem;color:var(--color-gray-600);margin-left:0.6rem;">(12 journal articles · 4 conference papers)</span>
+                </summary>
+                <div class="collapse-content">
+
+                    <!-- Journal Article 1 -->
+                    <div class="pub-item">
+                        <div class="pub-title">Fault-Tolerant Cost-Efficient Scheduling for Energy and Deadline-Constrained IoT Workflows in Edge-Cloud Continuum</div>
+                        <div class="pub-authors">Taghinezhad-Niar, A. &amp; Taheri, J.</div>
+                        <div class="pub-venue">IEEE Transactions on Services Computing, 2025</div>
+                        <div class="pub-meta">
+                            <span class="badge-metric q1">Q1 · IF 8.1</span>
+                            <span class="badge-metric">Fault tolerance</span>
+                            <span class="badge-metric">IoT</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1109/TSC.2025.3599497" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Journal Article 2 -->
+                    <div class="pub-item">
+                        <div class="pub-title">Security, Reliability, Cost, and Energy-aware Scheduling of Real-Time Workflows in Compute-Continuum Environments</div>
+                        <div class="pub-authors">Taghinezhad-Niar, A. &amp; Taheri, J.</div>
+                        <div class="pub-venue">IEEE Transactions on Cloud Computing, 2024</div>
+                        <div class="pub-meta">
+                            <span class="badge-metric q1">Q1 · IF 6.5</span>
+                            <span class="badge-metric">Security</span>
+                            <span class="badge-metric">Real-time</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1109/TCC.2024.3426282" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        </div>
+                    </div>
+
+                    <!-- Journal Article 3 -->
+                    <div class="pub-item">
+                        <div class="pub-title">State-Space Analysis and Complexity Assessment of Puzzle Games Using Colored Petri Nets</div>
+                        <div class="pub-authors">Taghinezhad-Niar, A.</div>
+                        <div class="pub-venue">International Journal of Web Research, 2024</div>
+                        <div class="pub-meta">
+                            <span class="badge-metric isc">ISC</span>
+                            <span class="badge-metric">Colored Petri Nets</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.22133/ijwr.2024.482725.1241" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        </div>
+                    </div>
+
+                    <!-- Journal Article 4 -->
+                    <div class="pub-item">
+                        <div class="pub-title">Reliability, Rental-Cost and Energy-Aware Multi-Workflow Scheduling on Multi-Cloud Systems</div>
+                        <div class="pub-authors">Taghinezhad-Niar, A. &amp; Taheri, J.</div>
+                        <div class="pub-venue">IEEE Transactions on Cloud Computing, 2023</div>
+                        <div class="pub-meta">
+                            <span class="badge-metric q1">Q1 · IF 6.5</span>
+                            <span class="badge-metric">Multi-cloud</span>
+                            <span class="badge-metric">Reliability</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1109/TCC.2022.3223869" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        </div>
+                    </div>
+
+                    <!-- Journal Article 5 -->
+                    <div class="pub-item">
+                        <div class="pub-title">QoS-aware online scheduling of multiple workflows under task execution time uncertainty in clouds</div>
+                        <div class="pub-authors">Taghinezhad-Niar, A., Pashazadeh, S. &amp; Taheri, J.</div>
+                        <div class="pub-venue">Cluster Computing (Springer), 2022</div>
+                        <div class="pub-meta">
+                            <span class="badge-metric q1">Q1 · IF 4.4</span>
+                            <span class="badge-metric">QoS</span>
+                            <span class="badge-metric">Uncertainty</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1007/s10586-022-03600-8" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        </div>
+                    </div>
+
+                    <!-- Journal Article 6 -->
+                    <div class="pub-item">
+                        <div class="pub-title">Energy-efficient workflow scheduling with budget-deadline constraints for cloud</div>
+                        <div class="pub-authors">Taghinezhad-Niar, A., Pashazadeh, S. &amp; Taheri, J.</div>
+                        <div class="pub-venue">Computing (Springer), 2022</div>
+                        <div class="pub-meta">
+                            <span class="badge-metric q2">Q2 · IF 3.7</span>
+                            <span class="badge-metric">Energy efficiency</span>
+                            <span class="badge-metric">Budget</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1007/s00607-021-01030-9" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        </div>
+                    </div>
+
+                    <!-- Journal Article 7 -->
+                    <div class="pub-item">
+                        <div class="pub-title">Workflow scheduling of scientific workflows under simultaneous deadline and budget constraints</div>
+                        <div class="pub-authors">Taghinezhad-Niar, A., Pashazadeh, S. &amp; Taheri, J.</div>
+                        <div class="pub-venue">Cluster Computing (Springer), 2021</div>
+                        <div class="pub-meta">
+                            <span class="badge-metric q1">Q1 · IF 4.4</span>
+                            <span class="badge-metric">Scientific workflows</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1007/s10586-021-03314-3" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        </div>
+                    </div>
+
+                    <!-- Journal Article 8 -->
+                    <div class="pub-item">
+                        <div class="pub-title">A Fault Tolerant Multi-Controller Framework for SDN DDoS Attacks Detection</div>
+                        <div class="pub-authors">Taghinezhad-Niar, A. &amp; Valizadeh, P.</div>
+                        <div class="pub-venue">International Journal of Web Research, 2022</div>
+                        <div class="pub-meta">
+                            <span class="badge-metric isc">ISC</span>
+                            <span class="badge-metric">SDN</span>
+                            <span class="badge-metric">DDoS</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="http://dx.doi.org/10.22133/ijwr.2022.345927.1119" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        </div>
+                    </div>
+
+                    <!-- Conference Papers -->
+                    <div style="margin-top:1.2rem;padding-top:0.8rem;border-top:2px solid var(--color-gray-200);">
+                        <h4 style="font-family:var(--font-sans);font-weight:600;font-size:1rem;color:var(--color-slate);">Conference Papers</h4>
+
+                        <div class="pub-item">
+                            <div class="pub-title">A Client-Centric Consistency Model for Distributed Data Stores using Colored Petri Nets</div>
+                            <div class="pub-authors">Taghinezhad-Niar, A.</div>
+                            <div class="pub-venue">2024 10th International Conference on Web Research (ICWR)</div>
+                            <div class="pub-meta">
+                                <span class="badge-metric">IEEE</span>
+                                <span class="badge-metric">Consistency models</span>
+                            </div>
+                            <div class="pub-links">
+                                <a href="https://doi.org/10.1109/ICWR61162.2024.10533365" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            </div>
+                        </div>
+
+                        <div class="pub-item">
+                            <div class="pub-title">DDoS Attacks Detection in Multi-Controller Based Software Defined Network</div>
+                            <div class="pub-authors">Taghinezhad-Niar, A. &amp; Valizadeh, P.</div>
+                            <div class="pub-venue">8th International Conference on Web Research (ICWR), 2022</div>
+                            <div class="pub-meta">
+                                <span class="badge-metric">IEEE</span>
+                                <span class="badge-metric">Network security</span>
+                            </div>
+                            <div class="pub-links">
+                                <a href="https://doi.org/10.1109/ICWR54782.2022.9786246" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            </div>
+                        </div>
+
+                        <div class="pub-item">
+                            <div class="pub-title">Modelling and analysis of the monotonic read consistent distributed system using coloured Petri net</div>
+                            <div class="pub-authors">Taghinezhad-Niar, A. &amp; Pashazadeh, S.</div>
+                            <div class="pub-venue">2016 Eighth International Conference on Information and Knowledge Technology (IKT)</div>
+                            <div class="pub-meta">
+                                <span class="badge-metric">IEEE</span>
+                                <span class="badge-metric">Distributed systems</span>
+                            </div>
+                            <div class="pub-links">
+                                <a href="https://doi.org/10.1109/IKT.2016.7777791" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            </div>
+                        </div>
+
+                        <div class="pub-item">
+                            <div class="pub-title">Modeling of Resource Monitoring in Federated Cloud using Colored Petri Net</div>
+                            <div class="pub-authors">Taghinezhad-Niar, A., Javadzadeh, T. &amp; Farzinvash, L.</div>
+                            <div class="pub-venue">Knowledge-Based Engineering and Innovation (KBEI), 2017</div>
+                            <div class="pub-meta">
+                                <span class="badge-metric">IEEE</span>
+                                <span class="badge-metric">Federated cloud</span>
+                            </div>
+                            <div class="pub-links">
+                                <a href="https://doi.org/10.1109/KBEI.2017.8324866" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    SECTION: TEACHING (collapsible)
+    ========================================================== -->
+    <section id="teaching" aria-labelledby="teaching-heading">
+        <div class="section-card">
+            <details class="collapsible-section">
+                <summary id="teaching-heading">
+                    <i class="fas fa-chalkboard-teacher" style="color:var(--color-accent);"></i>
+                    Teaching
+                </summary>
+                <div class="collapse-content">
+                    <div class="teaching-grid">
+                        <div class="course-item">
+                            <div class="course-code">CE 401</div>
+                            <div class="course-name">Distributed Systems</div>
+                            <div style="font-size:0.8rem;color:var(--color-gray-600);">Undergraduate · Spring 2025</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-code">CE 520</div>
+                            <div class="course-name">Cloud Computing &amp; Virtualization</div>
+                            <div style="font-size:0.8rem;color:var(--color-gray-600);">Graduate · Fall 2024</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-code">CE 435</div>
+                            <div class="course-name">Formal Methods in Software Engineering</div>
+                            <div style="font-size:0.8rem;color:var(--color-gray-600);">Undergraduate · Fall 2024</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-code">CE 610</div>
+                            <div class="course-name">Advanced Scheduling Algorithms</div>
+                            <div style="font-size:0.8rem;color:var(--color-gray-600);">Ph.D. · Spring 2025</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-code">CE 305</div>
+                            <div class="course-name">Operating Systems</div>
+                            <div style="font-size:0.8rem;color:var(--color-gray-600);">Undergraduate · Spring 2025</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-code">CE 490</div>
+                            <div class="course-name">Capstone Project in Distributed Computing</div>
+                            <div style="font-size:0.8rem;color:var(--color-gray-600);">Undergraduate · Fall 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    SECTION: STUDENTS (collapsible)
+    ========================================================== -->
+    <!-- <section id="students" aria-labelledby="students-heading">
+        <div class="section-card">
+            <details class="collapsible-section">
+                <summary id="students-heading">
+                    <i class="fas fa-user-graduate" style="color:var(--color-accent);"></i>
+                    Supervised Students
+                </summary>
+                <div class="collapse-content">
+                    <h4 style="font-size:1rem;font-family:var(--font-sans);font-weight:600;color:var(--color-slate);">Ph.D. Students</h4>
+                    <div class="student-list" style="margin-bottom:1rem;">
+                        <div class="student-item"><i class="fas fa-user"></i> Ali Rezaei · Distributed Scheduling</div>
+                        <div class="student-item"><i class="fas fa-user"></i> Sara Mohammadi · Formal Verification</div>
+                    </div>
+                    <h4 style="font-size:1rem;font-family:var(--font-sans);font-weight:600;color:var(--color-slate);">M.Sc. Students</h4>
+                    <div class="student-list">
+                        <div class="student-item"><i class="fas fa-user"></i> Hossein Karimi · Cloud Workflow</div>
+                        <div class="student-item"><i class="fas fa-user"></i> Fatemeh Gholami · Edge AI</div>
+                        <div class="student-item"><i class="fas fa-user"></i> Reza Abbasi · Petri Nets</div>
+                        <div class="student-item"><i class="fas fa-user"></i> Neda Jalali · SDN Security</div>
+                        <div class="student-item"><i class="fas fa-user"></i> Mehdi Rostami · Scheduling Algorithms</div>
+                    </div>
+                    <p style="font-size:0.85rem;color:var(--color-gray-600);margin-top:0.8rem;">
+                        <i class="fas fa-info-circle"></i> I welcome motivated students to join our lab. Please reach out via email.
+                    </p>
+                </div>
+            </details>
+        </div>
+    </section> -->
+
+    <!-- ==========================================================
+    SECTION: PROJECTS / GRANTS (collapsible)
+    ========================================================== -->
+    <section id="projects" aria-labelledby="projects-heading">
+        <div class="section-card">
+            <details class="collapsible-section">
+                <summary id="projects-heading">
+                    <i class="fas fa-project-diagram" style="color:var(--color-accent);"></i>
+                    Projects &amp; Grants
+                </summary>
+             <div class="collapse-content">
+    <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Comprehensive Evaluation, Comparison, and Feasibility Analysis of Privileged Access Management (PAM) Tools</span>
+        </div>
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Design and Development of a Website Security Requirements Improvement System</span>
+        </div>
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Design and Development of an Intelligent Scientific Research Resource Analysis System</span>
+        </div>
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Development of an Intelligent Service for Downloading Scholarly Resources via University Proxies and Academic Databases</span>
+        </div>
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Application of Natural Language Processing Technology to Scientific Publications and Registered Patent Data</span>
+        </div>
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Energy-Constrained and Cost-Aware Real-Time Workflow Scheduling in Fog–Cloud Computing</span>
+        </div>
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Question Answering System for Science and Technology Using Natural Language Processing and Scientific Publication and Patent Data</span>
+        </div>
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Development of an Intelligent Expert System for Psychological Analysis in Occupational Domains</span>
+        </div>
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Design and Development of an Advanced Persian Intelligent Research Assistant</span>
+        </div>
+        <div class="project-item" style="display:flex;align-items:baseline;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--color-gray-200);">
+            <span style="color:var(--color-accent);font-weight:700;font-size:1.2rem;">▹</span>
+            <span class="project-title" style="font-weight:500;font-size:0.95rem;color:var(--color-primary);">Design and Development of an Intelligent Service for Converting Ideas into Diagrams, Flowcharts, or Roadmaps</span>
+        </div>
+    </div>
+</div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    SECTION: AWARDS (collapsible)
+    ========================================================== -->
+    <section id="awards" aria-labelledby="awards-heading">
+        <div class="section-card">
+            <details class="collapsible-section">
+                <summary id="awards-heading">
+                    <i class="fas fa-trophy" style="color:var(--color-accent);"></i>
+                    Awards &amp; Honors
+                </summary>
+                <div class="collapse-content">
+                    <ul class="award-list">
+                        <li><i class="fas fa-certificate"></i> Recruitment Plan in the Executive Board Award — National Elites Foundation of Iran, 2023</li>
+                        <li><i class="fas fa-certificate"></i> Sayyad Shirazi Award — National Elites Foundation of Iran, 2022</li>
+                        <li><i class="fas fa-certificate"></i> Admitted as an Exceptional Talent for Ph.D. programs, 2021</li>
+                        <li><i class="fas fa-trophy"></i> 1<sup>st</sup> Place — Ph.D. in Computer Engineering, 2017–2021</li>
+                        <li><i class="fas fa-trophy"></i> 2<sup>nd</sup> Place — M.Sc. in Software Engineering, 2015–2017</li>
+                        <li><i class="fas fa-trophy"></i> Top Student — B.Sc. in Software Engineering</li>
+                        <li><i class="fas fa-certificate"></i> Honored Person — Iran Periodical Technology Competition (“Fannavard”) as Full Stack Developer, 2016</li>
+                        <li><i class="fas fa-certificate"></i> Honored Person — ICT-Sharif Competition as Programmer, 2020</li>
+                        <li><i class="fas fa-certificate"></i> Practical Workshop: Wireless Networks Security and Ethical Hacking — University of Tabriz, 2017</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    SECTION: REVIEWER (collapsible)
+    ========================================================== -->
+    <section id="reviewer" aria-labelledby="reviewer-heading">
+        <div class="section-card">
+            <details class="collapsible-section">
+                <summary id="reviewer-heading">
+                    <i class="fas fa-star" style="color:var(--color-accent);"></i>
+                    Reviewer for Journals &amp; Conferences
+                </summary>
+                <div class="collapse-content">
+                    <div class="review-grid">
+                        <div class="review-item"><span class="rank-badge q1">Q1</span> Mathematics and Computers in Simulation (Elsevier)</div>
+                        <div class="review-item"><span class="rank-badge q1">Q1</span> Reliability Engineering &amp; System Safety (Elsevier)</div>
+                        <div class="review-item"><span class="rank-badge q1">Q1</span> Sustainable Computing: Informatics and Systems (Elsevier)</div>
+                        <div class="review-item"><span class="rank-badge q1">Q1</span> Scientific Reports (Nature Portfolio)</div>
+                        <div class="review-item"><span class="rank-badge q1">Q1</span> IEEE Transactions on Mobile Computing</div>
+                        <div class="review-item"><span class="rank-badge q1">Q1</span> IEEE/CAA Journal of Automatica Sinica</div>
+                        <div class="review-item"><span class="rank-badge q2">Q2</span> Journal of Supercomputing (Springer)</div>
+                        <div class="review-item"><span class="rank-badge q1">Q1</span> Cluster Computing (Springer)</div>
+                        <div class="review-item"><span class="rank-badge q2">Q2</span> Computing (Springer)</div>
+                        <div class="review-item"><span class="rank-badge q3">Q3</span> Indonesian Journal of Electrical Engineering and Computer Science</div>
+                        <div class="review-item"><span class="rank-badge" style="background:#e2e3ff;color:#3d3d8c;">Conf</span> 8th International Conference on Web Research (ICWR 2022)</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    SECTION: CONTACT (collapsible)
+    ========================================================== -->
+    <section id="contact" aria-labelledby="contact-heading">
+        <div class="section-card">
+            <details class="collapsible-section" open>
+                <summary id="contact-heading">
+                    <i class="fas fa-envelope" style="color:var(--color-accent);"></i>
+                    Contact Me
+                </summary>
+                <div class="collapse-content">
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+                        <div>
+                            <h4 style="font-family:var(--font-sans);font-weight:600;font-size:1rem;color:var(--color-primary);">Email</h4>
+                            <p><a href="mailto:a0taghinezhad@gmail.com">a0taghinezhad@gmail.com</a><br />
+                            <a href="mailto:a.taghinezhad@tabrizu.ac.ir">a.taghinezhad@tabrizu.ac.ir</a></p>
+                            <h4 style="font-family:var(--font-sans);font-weight:600;font-size:1rem;color:var(--color-primary);margin-top:1rem;">Office</h4>
+                            <p style="font-size:0.95rem;color:var(--color-slate);">
+                                Department of Computer Engineering<br />
+                                University of Tabriz<br />
+                                Tabriz, Iran
+                            </p>
+                            <div style="display:flex;gap:0.8rem;margin-top:0.5rem;">
+                                <a href="https://www.linkedin.com/in/ahmad-taghinezhad/" target="_blank" class="social-icon" style="width:44px;height:44px;font-size:1.3rem;"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://faculty.tabrizu.ac.ir/a-taghinezhad/fa" target="_blank" class="social-icon" style="width:44px;height:44px;font-size:1.3rem;"><i class="fas fa-university"></i></a>
+                                <a href="https://orcid.org/0000-0003-2353-9335" target="_blank" class="social-icon" style="width:44px;height:44px;font-size:1.3rem;"><i class="fab fa-orcid"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <form class="contact-form" method="POST" action="https://formsubmit.co/947dd729cec1f46c27b9bd6a5f6f49b9" enctype="multipart/form-data">
+                                <div style="margin-bottom:0.8rem;">
+                                    <label for="contact-email" style="font-weight:500;font-size:0.9rem;">Your Email</label>
+                                    <input type="email" id="contact-email" class="form-control" name="email" placeholder="myname@gmail.com" required />
+                                </div>
+                                <div style="margin-bottom:0.8rem;">
+                                    <label for="contact-message" style="font-weight:500;font-size:0.9rem;">Message</label>
+                                    <textarea id="contact-message" class="form-control" name="message" rows="4" placeholder="Details of your request…" required></textarea>
+                                </div>
+                                <input type="hidden" name="_next" value="https://ataghinezhad.github.io/response.html" />
+                                <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    FOOTER
+    ========================================================== -->
+    <div style="text-align:center;padding:1.5rem 0 0.5rem;font-size:0.8rem;color:var(--color-gray-600);border-top:1px solid var(--color-gray-300);">
+        &copy; 2026   &middot; &middot;
+        <a href="#top" style="color:var(--color-accent);">Back to top <i class="fas fa-arrow-up"></i></a>
+    </div>
+
+</div><!-- /.main-content -->
+
+<!-- ============================================================
+SCRIPTS
+============================================================ -->
+<!-- Bootstrap 5 JS bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- Optional: smooth scroll for all anchor links (progressive enhancement) -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scroll for nav links
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile nav if open
+                    const navCollapse = document.getElementById('navbarContent');
+                    if (navCollapse && navCollapse.classList.contains('show')) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+                        if (bsCollapse) bsCollapse.hide();
+                    }
+                }
+            });
+        });
+
+        // Ensure details elements remember open state across page loads (optional)
+        // We keep them as they are — open by default for main sections.
+    });
+</script>
+
+</body>
+</html>
