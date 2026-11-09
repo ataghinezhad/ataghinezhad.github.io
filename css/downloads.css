@@ -1,0 +1,139 @@
+.downloads-intro {
+    padding: 2rem 2.2rem;
+}
+
+.downloads-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.downloads-intro h1 {
+    margin-bottom: 0.65rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.downloads-intro p {
+    max-width: 680px;
+    margin: 0;
+    color: var(--color-gray-600);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: 1.1rem;
+}
+
+.course-item {
+    display: flex;
+    min-width: 0;
+    min-height: 225px;
+    flex-direction: column;
+    padding: 1.35rem;
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    box-shadow: var(--shadow-card);
+    transition: box-shadow var(--transition-med), transform var(--transition-fast);
+}
+
+.course-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.course-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+.course-meta > i {
+    font-size: 1.1rem;
+}
+
+.course-level {
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    background: #eaf2fc;
+    color: var(--color-primary-light);
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.course-level.undergraduate {
+    background: #edf5ef;
+    color: #28613a;
+}
+
+.course-level.supplementary {
+    background: #f3effb;
+    color: #5d438b;
+}
+
+.course-item h2 {
+    margin-bottom: 0.55rem;
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.course-item p {
+    margin-bottom: 1rem;
+    color: var(--color-gray-600);
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.course-item[dir="rtl"] {
+    text-align: right;
+}
+
+.course-item[dir="rtl"] .course-meta {
+    flex-direction: row-reverse;
+}
+
+.course-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    align-self: flex-start;
+    margin-top: auto;
+    font-size: 0.87rem;
+    font-weight: 600;
+}
+
+.course-item[dir="rtl"] .course-link {
+    align-self: flex-end;
+}
+
+.downloads-footer {
+    padding: 1.5rem 0 0.5rem;
+    color: var(--color-gray-600);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .downloads-intro {
+        padding: 1.4rem;
+    }
+
+    .course-grid {
+        gap: 0.8rem;
+    }
+
+    .course-item {
+        min-height: 0;
+    }
+}
